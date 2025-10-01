@@ -1,0 +1,18 @@
+.snowsight-button {
+    background-color: #29b5e8;
+    color: white;
+    margin: 5px;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.snowsight-button:hover {
+    background-color: #17a0d1;
+    cursor: pointer;
+}
+
+.snowsight-button-icon {
+    margin-left: 3px;
+}

@@ -1,0 +1,981 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>1 - Logging in and ready to start - Snowflake Lab Platform</title>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../stylesheets/main.css">
+    
+      <link rel="stylesheet" href="../stylesheets/header.css">
+    
+      <link rel="stylesheet" href="../stylesheets/footer.css">
+    
+      <link rel="stylesheet" href="../stylesheets/collapsed-code.css">
+    
+      <link rel="stylesheet" href="../stylesheets/build-badge.css">
+    
+      <link rel="stylesheet" href="../stylesheets/customer-logo.css">
+    
+      <link rel="stylesheet" href="../stylesheets/snowsight-button.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../stylesheets/glightbox.min.css" rel="stylesheet"><script src="../javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="light-blue" data-md-color-primary="custom" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-logging-in-and-ready-to-start" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+       
+
+<!-- Header -->
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner dataops-header" aria-label="Header">
+    <!-- DataOps.live app switcher -->
+    <div class="app-switcher">
+      <!-- Switcher button -->
+      <button onclick="onAppSwitcherClick()" id="app-switcher-button" type="button" aria-haspopup="listbox" aria-expanded="false" data-headlessui-state="">
+        <img width="20" src="assets/img/dot-grid.svg">
+      </button>
+
+      <!-- Options -->
+      <ul class="app-switcher-options hidden" aria-labelledby="headlessui-listbox-button-:r0:" aria-orientation="vertical" id="app-switcher-options" role="listbox" tabindex="0" data-headlessui-state="open">
+        <li id="headlessui-listbox-option-:r1h:" role="option" tabindex="-1" aria-selected="false" data-headlessui-state="">
+          <a href="https://app.dataops.live" target="_self" rel="noreferrer" class="block truncate font-normal">Operate</a>
+        </li>
+        <li id="headlessui-listbox-option-:r1i:" role="option" tabindex="-1" aria-selected="false" data-headlessui-state="">
+          <a href="https://observability.dataops.live" target="_self" rel="noreferrer" class="block truncate font-normal">Observe</a>
+        </li>
+        <li id="headlessui-listbox-option-:r1j:" role="option" tabindex="-1" aria-selected="false" data-headlessui-state="">
+          <a href="https://docs.dataops.live/" target="_blank" rel="noreferrer" class="block truncate font-normal">Learn</a>
+        </li>
+        <li id="headlessui-listbox-option-:r1k:" role="option" tabindex="-1" aria-selected="false" data-headlessui-state="">
+          <a href="https://community.dataops.live/" target="_blank" rel="noreferrer" class="block truncate font-normal">Engage</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- DataOps.live logo -->
+    <div class="dataops-logo-container">
+      <a href="https://www.dataops.live/snowflake" target="_blank" rel="noreferrer"><img height="32" src="assets/img/solution-central.png" alt="DataOps.live"></a>
+    </div>
+
+    <!-- portal logo -->
+    <div class="portal-logo-container">
+      <a href="https://quickstarts.snowflake.com"><img height="25" src="assets/stock_exchange_logo.svg" alt="Event homepage for Dry Run for Build an AI Assistant for FSI using Cortex and Document AI"></a>
+    </div>
+
+    <!-- Portal name -->
+    <div class="portal-name">
+      <a href="/">Dry Run for Build an AI Assistant for FSI using Cortex and Document AI Event</a>
+    </div>
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis"> Snowflake Lab Platform </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+             1 - Logging in and ready to start 
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette toggle -->
+     
+    <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light-blue" data-md-color-primary="custom" data-md-color-accent="blue" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+</form>  
+
+    <!-- User preference: color palette -->
+     <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> 
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+    <label class="md-header__button md-icon" for="__search">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+    </label>
+
+    <!-- Search interface -->
+    <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+    <!-- Repository information -->
+    
+  </nav>
+
+  <!-- Navigation tabs (sticky) -->
+    
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../index.html" class="md-tabs__link">
+          
+  
+  
+  Welcome
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Logging_in.html" class="md-tabs__link">
+          
+  
+  
+  Lab Steps
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>  
+</header>
+
+<script>
+  function onAppSwitcherClick() {
+    const appSwitcherButton = document.getElementById("app-switcher-button");
+    const appSwitcherPanel = document.getElementById("app-switcher-options");
+    appSwitcherButton.classList.toggle("app-switcher-active");
+    appSwitcherPanel.classList.toggle("hidden");
+  }
+</script>
+
+<!-- Close the app switcher panel is the user clicks away -->
+<script>
+  window.addEventListener("click", function (e) {
+    const appSwitcherButton = document.getElementById("app-switcher-button");
+    const appSwitcherPanel = document.getElementById("app-switcher-options");
+
+    if (
+      !appSwitcherButton.contains(e.target) &&
+      !appSwitcherPanel.contains(e.target)
+    ) {
+      appSwitcherButton.classList.remove("app-switcher-active");
+      appSwitcherPanel.classList.add("hidden");
+    }
+  });
+</script>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Snowflake Lab Platform" class="md-nav__button md-logo" aria-label="Snowflake Lab Platform" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Snowflake Lab Platform
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build an AI Assistant for FSI using Cortex and Document AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lab Steps
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lab Steps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Logging_in.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging in and Cortex Playground
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Unstructured Data Processing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unstructured Data Processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../document_ai.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sound_transcripts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analyst Investor Calls
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../search_service.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Search Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Structured Data Processing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Structured Data Processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../market_place.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Get Data from the MarketPlace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analyst.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analyse your data with Cortex Analyst
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4">
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Application
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snowflake_intelligence.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure and use Snowflake Intelligence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agents.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Cortex Agents using the Agents API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1-logging-in-and-ready-to-start">1 - Logging in and ready to start</h1>
+<p>If you are here, you have already completed the registration process, and your prebuilt Snowflake environment details are shown on your event page. It will look similar to:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../step1/Screenshot1.png" data-desc-position="bottom"><img src="../step1/Screenshot1.png" alt="Registration page screenshot" width="600"></a></p>
+<p>You can always get back to your registration page and see your information by clicking here: <a href="https://go.dataops.live/dry-run-build-ai-assistant-oct" target="_blank">Personalized Event Homepage</a></p>
+<!-- [Claim your free access to the DataOps.live platform](cta.md) -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+    
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    <!-- Build details for debugging -->
+<div id="build-details" hidden>
+  <a id="build-details-location"></a><div>DATAOPS_COALESCE_RUNNER_IMAGE: <span id="DATAOPS_COALESCE_RUNNER_IMAGE">dataopslive/dataops-coalesce-runner:5-stable</span></div><div>DATAOPS_ENV_NAME_DEV: <span id="DATAOPS_ENV_NAME_DEV">DEV</span></div><div>CI_PROJECT_NAMESPACE: <span id="CI_PROJECT_NAMESPACE">snowflake/hands-on-labs</span></div><div>DATAOPS_DOCKER_RUNNER_IMAGE: <span id="DATAOPS_DOCKER_RUNNER_IMAGE">dataopslive/dataops-docker-runner:5-stable</span></div><div>CI_RUNNER_VERSION: <span id="CI_RUNNER_VERSION">14.9-3</span></div><div>DATAOPS_SODA_RUNNER_IMAGE: <span id="DATAOPS_SODA_RUNNER_IMAGE">dataopslive/dataops-soda-runner:5-stable</span></div><div>CI_SERVER_NAME: <span id="CI_SERVER_NAME">GitLab</span></div><div>CI_RUNNER_DESCRIPTION: <span id="CI_RUNNER_DESCRIPTION">Pipeline runner for reconfigure event pipelines</span></div><div>CI_SERVER_REVISION: <span id="CI_SERVER_REVISION">e82aa204c1d</span></div><div>CI_RUNNER_EXECUTABLE_ARCH: <span id="CI_RUNNER_EXECUTABLE_ARCH">linux/amd64</span></div><div>CI_REGISTRY_USER: <span id="CI_REGISTRY_USER">gitlab-ci-token</span></div><div>CI_API_V4_URL: <span id="CI_API_V4_URL">https://app.dataops.live/api/v4</span></div><div>CI_RUNNER_SHORT_TOKEN: <span id="CI_RUNNER_SHORT_TOKEN">SWfAuLci</span></div><div>CI_JOB_NAME: <span id="CI_JOB_NAME">Build Homepage</span></div><div>DATAOPS_DEBUG: <span id="DATAOPS_DEBUG"></span></div><div>DATAOPS_BASE_RUNNER_IMAGE: <span id="DATAOPS_BASE_RUNNER_IMAGE">dataopslive/dataops-base-runner:5-stable</span></div><div>DATAOPS_FEATURE_BRANCH_NONDB_ENV_NAME: <span id="DATAOPS_FEATURE_BRANCH_NONDB_ENV_NAME">DEV</span></div><div>DATAOPS_ENV_NAME_PROD: <span id="DATAOPS_ENV_NAME_PROD">PROD</span></div><div>CI_PROJECT_NAME: <span id="CI_PROJECT_NAME">build-an-ai-assistant-for-fsi-using-cortex-and-documentai</span></div><div>CI_PIPELINE_SOURCE: <span id="CI_PIPELINE_SOURCE">api</span></div><div>CI_BUILD_REF_NAME: <span id="CI_BUILD_REF_NAME">main</span></div><div>DATAOPS_MATILLION_RUNNER_IMAGE: <span id="DATAOPS_MATILLION_RUNNER_IMAGE">dataopslive/dataops-matillion-runner:5-stable</span></div><div>DATAOPS_AUTOINGESTION_RUNNER_IMAGE: <span id="DATAOPS_AUTOINGESTION_RUNNER_IMAGE">dataopslive/dataops-autoingestion-runner:5-stable</span></div><div>DATAOPS_PYTHON2_RUNNER_IMAGE: <span id="DATAOPS_PYTHON2_RUNNER_IMAGE">dataopslive/dataops-python2-runner:5-stable</span></div><div>CI_JOB_STATUS: <span id="CI_JOB_STATUS">running</span></div><div>DATAOPS_R_RUNNER_IMAGE: <span id="DATAOPS_R_RUNNER_IMAGE">dataopslive/dataops-r-runner:5-stable</span></div><div>DATAOPS_BEFORE_SCRIPT_HAS_RUN: <span id="DATAOPS_BEFORE_SCRIPT_HAS_RUN">YES</span></div><div>CI_PIPELINE_ID: <span id="CI_PIPELINE_ID">8390832</span></div><div>CI_BUILD_REF_SLUG: <span id="CI_BUILD_REF_SLUG">main</span></div><div>CI_COMMIT_REF_SLUG: <span id="CI_COMMIT_REF_SLUG">main</span></div><div>CI_SERVER: <span id="CI_SERVER">yes</span></div><div>DATAOPS_SNOWFLAKE_ACCOUNT: <span id="DATAOPS_SNOWFLAKE_ACCOUNT">sfsehol-dry_run_build_ai_assistant_oct_vuifug</span></div><div>DATAOPS_DATABASE: <span id="DATAOPS_DATABASE">DATAOPS_EVENT_PROD</span></div><div>CI_COMMIT_SHORT_SHA: <span id="CI_COMMIT_SHORT_SHA">75631c20</span></div><div>CI_JOB_NAME_SLUG: <span id="CI_JOB_NAME_SLUG">build-homepage</span></div><div>DATAOPS_RUNNER_IMAGE_TAG: <span id="DATAOPS_RUNNER_IMAGE_TAG">5-stable</span></div><div>CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX: <span id="CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX">app.dataops.live:443/snowflake/dependency_proxy/containers</span></div><div>DATAOPS_COLLIBRA_RUNNER_IMAGE: <span id="DATAOPS_COLLIBRA_RUNNER_IMAGE">dataopslive/dataops-collibra-runner:5-stable</span></div><div>DATAOPS_API_RUNNER_IMAGE: <span id="DATAOPS_API_RUNNER_IMAGE">dataopslive/dataops-api-runner:5-stable</span></div><div>DATAOPS_DATADOTWORLD_RUNNER_IMAGE: <span id="DATAOPS_DATADOTWORLD_RUNNER_IMAGE">dataopslive/dataops-datadotworld-runner:5-stable</span></div><div>DATAOPS_REFERENCE_PROJECT_DIR: <span id="DATAOPS_REFERENCE_PROJECT_DIR">reference-projects</span></div><div>DATAOPS_REPORTING_RUNNER_IMAGE: <span id="DATAOPS_REPORTING_RUNNER_IMAGE">dataopslive/dataops-reporting-runner:5-stable</span></div><div>CI_RUNNER_TAGS: <span id="CI_RUNNER_TAGS">["prod-quick-reconfigure-pipeline-runner-2023"]</span></div><div>CI_PROJECT_PATH: <span id="CI_PROJECT_PATH">snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai</span></div><div>CI_SERVER_TLS_CA_FILE: <span id="CI_SERVER_TLS_CA_FILE">/builds/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai.tmp/CI_SERVER_TLS_CA_FILE</span></div><div>CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX: <span id="CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX">app.dataops.live:443/snowflake/hands-on-labs/dependency_proxy/containers</span></div><div>DATAOPS_FIVETRAN_RUNNER_IMAGE: <span id="DATAOPS_FIVETRAN_RUNNER_IMAGE">dataopslive/dataops-fivetran-runner:5-stable</span></div><div>DATAOPS_GIT_RUNNER_IMAGE: <span id="DATAOPS_GIT_RUNNER_IMAGE">dataopslive/dataops-git-runner:5-stable</span></div><div>DATAOPS_TAC_RUNNER_IMAGE: <span id="DATAOPS_TAC_RUNNER_IMAGE">dataopslive/dataops-tac-runner:5-stable</span></div><div>CI_COMMIT_REF_PROTECTED: <span id="CI_COMMIT_REF_PROTECTED">true</span></div><div>DATAOPS_TESTHARNESS_IMAGE: <span id="DATAOPS_TESTHARNESS_IMAGE">dataopslive/dataops-testharness-runner:5-stable</span></div><div>CI_API_GRAPHQL_URL: <span id="CI_API_GRAPHQL_URL">https://app.dataops.live/api/graphql</span></div><div>CI_SERVER_VERSION_MINOR: <span id="CI_SERVER_VERSION_MINOR">11</span></div><div>CI_COMMIT_SHA: <span id="CI_COMMIT_SHA">75631c20d7791c4fa8af63621fe198657cf277f8</span></div><div>CI_PROJECT_VISIBILITY: <span id="CI_PROJECT_VISIBILITY">private</span></div><div>CI_CONCURRENT_PROJECT_ID: <span id="CI_CONCURRENT_PROJECT_ID">0</span></div><div>DATAOPS_PREFIX: <span id="DATAOPS_PREFIX">DATAOPS_EVENT</span></div><div>CI_COMMIT_MESSAGE: <span id="CI_COMMIT_MESSAGE">Update PREVIEW.md</span></div><div>DATAOPS_REFERENCE_PROJECT_NAME: <span id="DATAOPS_REFERENCE_PROJECT_NAME">dataops-reference</span></div><div>DATAOPS_BRANCH_NAME_QA: <span id="DATAOPS_BRANCH_NAME_QA">qa</span></div><div>CI_SERVER_SHELL_SSH_PORT: <span id="CI_SERVER_SHELL_SSH_PORT">22</span></div><div>CI_JOB_JWT_V1: <span id="CI_JOB_JWT_V1">eyJraWQiOiJYSnE3S0M0dWFoU01vUEZRTTZXeE94eWVhcjJlV1Q4bmgzZ0xFcFlEcGFJIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJuYW1lc3BhY2VfaWQiOiIzNTU3OCIsIm5hbWVzcGFjZV9wYXRoIjoic25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMiLCJwcm9qZWN0X2lkIjoiMjEyNDciLCJwcm9qZWN0X3BhdGgiOiJzbm93Zmxha2UvaGFuZHMtb24tbGFicy9idWlsZC1hbi1haS1hc3Npc3RhbnQtZm9yLWZzaS11c2luZy1jb3J0ZXgtYW5kLWRvY3VtZW50YWkiLCJ1c2VyX2lkIjoiMjE5NCIsInVzZXJfbG9naW4iOiJhZG1pbi1hcHAtc2VydmljZS11c2VyIiwidXNlcl9lbWFpbCI6InNlcnZpY2UuYWRtaW4tYXBwQGRhdGFvcHMubGl2ZSIsInBpcGVsaW5lX2lkIjoiODM5MDgzMiIsInBpcGVsaW5lX3NvdXJjZSI6ImFwaSIsImpvYl9pZCI6IjY0NzIyNzA1IiwicmVmIjoibWFpbiIsInJlZl90eXBlIjoiYnJhbmNoIiwicmVmX3Byb3RlY3RlZCI6InRydWUiLCJqdGkiOiI1MGE2ZWI1NS03YWQxLTQ0NTAtODFhMC0wODlmNGE0Mzc1M2UiLCJpc3MiOiJhcHAuZGF0YW9wcy5saXZlIiwiaWF0IjoxNzU5MzM1MTA5LCJuYmYiOjE3NTkzMzUxMDQsImV4cCI6MTc1OTMzODcwOSwic3ViIjoiam9iXzY0NzIyNzA1In0.AYvIN-A28ucCUlHKAQ3plfBYq6aqOSnAnBmLzvUufKlzm9FLwhvSV8S2ZLfR0i0MLpyPssFNTkwBpgI1vJmbJ6tw6AvS3TIb-fkwIWdI1C4WZcj9s3yCf8dTd1czDm7aYLs6vhOIy0fAZn8fWaZraCSlkO0rgIhOicjvSPm1n3_WzneF3u362QqhnxSMo0uH_6cbihd9PO4p2HBF2jRB40xoN3uXciCP8t4F4OCVRhdcyfYTKF0c0R9SHD1HmZ3qUl8tP7OmQUMifhrltOTDlMV4UsLW5lFX-Fd3tnYGk7aFwP9CM2ldUbUWZgs8XNHg4nLd20GOEy1xN3sidnFm1A</span></div><div>CI_JOB_JWT_V2: <span id="CI_JOB_JWT_V2">eyJraWQiOiJYSnE3S0M0dWFoU01vUEZRTTZXeE94eWVhcjJlV1Q4bmgzZ0xFcFlEcGFJIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJuYW1lc3BhY2VfaWQiOiIzNTU3OCIsIm5hbWVzcGFjZV9wYXRoIjoic25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMiLCJwcm9qZWN0X2lkIjoiMjEyNDciLCJwcm9qZWN0X3BhdGgiOiJzbm93Zmxha2UvaGFuZHMtb24tbGFicy9idWlsZC1hbi1haS1hc3Npc3RhbnQtZm9yLWZzaS11c2luZy1jb3J0ZXgtYW5kLWRvY3VtZW50YWkiLCJ1c2VyX2lkIjoiMjE5NCIsInVzZXJfbG9naW4iOiJhZG1pbi1hcHAtc2VydmljZS11c2VyIiwidXNlcl9lbWFpbCI6InNlcnZpY2UuYWRtaW4tYXBwQGRhdGFvcHMubGl2ZSIsInBpcGVsaW5lX2lkIjoiODM5MDgzMiIsInBpcGVsaW5lX3NvdXJjZSI6ImFwaSIsImpvYl9pZCI6IjY0NzIyNzA1IiwicmVmIjoibWFpbiIsInJlZl90eXBlIjoiYnJhbmNoIiwicmVmX3Byb3RlY3RlZCI6InRydWUiLCJqdGkiOiI4MjdlYjdjYi00MjE0LTRiN2MtYjdiZi0xYTk4MmFmYjc3ODIiLCJpc3MiOiJodHRwczovL2FwcC5kYXRhb3BzLmxpdmUiLCJpYXQiOjE3NTkzMzUxMDksIm5iZiI6MTc1OTMzNTEwNCwiZXhwIjoxNzU5MzM4NzA5LCJzdWIiOiJwcm9qZWN0X3BhdGg6c25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMvYnVpbGQtYW4tYWktYXNzaXN0YW50LWZvci1mc2ktdXNpbmctY29ydGV4LWFuZC1kb2N1bWVudGFpOnJlZl90eXBlOmJyYW5jaDpyZWY6bWFpbiIsImF1ZCI6Imh0dHBzOi8vYXBwLmRhdGFvcHMubGl2ZSJ9.O3n5vVzuB0o7sv4YoV-aZAo7m3vbzuw-GBjFGIqB7yYPZLkAGDoBUjAiQIqHtWbCPZylLfY8OsyX_5Yhd7hEkOmeI8AExQ5LkuYdf5V2zpiy18LekFYfKWhMdLr9RDFj49sGu5GFMkIiwZfgqhgbStxU-1eGAHMk9x4JyhuWgty02vyNZ6Els_sa2uQHtka78rLtlsur7V5SYFvitTjQmH12Udw60dLCQR61PTd50jl1SWE20S2SQh0LtFORkuuo-7Tgj_WEs8efwCSoD4bIZfBNmE_n8qSyWUpZDu9XImUrScYMBi95jTGP5L2z0fymTy0VW34O-JMU-5b0_yGDRw</span></div><div>DATAOPS_REFERENCE_PROJECT_DOTENV_PATH: <span id="DATAOPS_REFERENCE_PROJECT_DOTENV_PATH">dataops-reference-vars.env</span></div><div>DATAOPS_STAGEINGESTION_RUNNER_IMAGE: <span id="DATAOPS_STAGEINGESTION_RUNNER_IMAGE">dataopslive/dataops-stageingestion-runner:5-stable</span></div><div>CI_BUILD_NAME: <span id="CI_BUILD_NAME">Build Homepage</span></div><div>CI_PAGES_DOMAIN: <span id="CI_PAGES_DOMAIN">example.com</span></div><div>DATAOPS_BRANCH_NAME_DEV: <span id="DATAOPS_BRANCH_NAME_DEV">dev</span></div><div>CI_SERVER_VERSION: <span id="CI_SERVER_VERSION">v15.11.13-250821-0852</span></div><div>CI_SERVER_PORT: <span id="CI_SERVER_PORT">443</span></div><div>DATAOPS_ICON: <span id="DATAOPS_ICON">https://dataops-public-assets.s3.eu-west-2.amazonaws.com/dataops-icon.png</span></div><div>CI_PROJECT_NAMESPACE_ID: <span id="CI_PROJECT_NAMESPACE_ID">35578</span></div><div>DATAOPS_TERRAFORM_RUNNER_IMAGE: <span id="DATAOPS_TERRAFORM_RUNNER_IMAGE">dataopslive/dataops-terraform-runner:5-stable</span></div><div>DATAOPS_PYTHON3_RUNNER_IMAGE: <span id="DATAOPS_PYTHON3_RUNNER_IMAGE">dataopslive/dataops-python3-runner:5-stable</span></div><div>CI_PAGES_URL: <span id="CI_PAGES_URL">http://snowflake.example.com/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai</span></div><div>DATAOPS_VAULT_CONTENT: <span id="DATAOPS_VAULT_CONTENT">/builds/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai/vault-content/vault.yml</span></div><div>CI_PIPELINE_IID: <span id="CI_PIPELINE_IID">3928</span></div><div>CI_REPOSITORY_URL: <span id="CI_REPOSITORY_URL">https://gitlab-ci-token:64_zxYJ4tDkRF9xsFz1qaSX@app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai.git</span></div><div>CI_SERVER_URL: <span id="CI_SERVER_URL">https://app.dataops.live</span></div><div>DATAOPS_THOUGHTSPOT_RUNNER_IMAGE: <span id="DATAOPS_THOUGHTSPOT_RUNNER_IMAGE">dataopslive/dataops-thoughtspot-runner:5-stable</span></div><div>CI_COMMIT_DESCRIPTION: <span id="CI_COMMIT_DESCRIPTION"></span></div><div>CI_TEMPLATE_REGISTRY_HOST: <span id="CI_TEMPLATE_REGISTRY_HOST">registry.gitlab.com</span></div><div>CI_JOB_STAGE: <span id="CI_JOB_STAGE">Pipeline Initialisation</span></div><div>CI_PIPELINE_URL: <span id="CI_PIPELINE_URL">https://app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai/-/pipelines/8390832</span></div><div>CI_DEFAULT_BRANCH: <span id="CI_DEFAULT_BRANCH">main</span></div><div>DATAOPS_DATAPREP_RUNNER_IMAGE: <span id="DATAOPS_DATAPREP_RUNNER_IMAGE">dataopslive/dataops-dataprep-runner:5-stable</span></div><div>DATAOPS_SNOWPARKJAVA_RUNNER_IMAGE: <span id="DATAOPS_SNOWPARKJAVA_RUNNER_IMAGE">dataopslive/dataops-snowparkjava-runner:5-stable</span></div><div>CI_BUILD_REF: <span id="CI_BUILD_REF">75631c20d7791c4fa8af63621fe198657cf277f8</span></div><div>DATAOPS_TRANSFORM_RUNNER_IMAGE: <span id="DATAOPS_TRANSFORM_RUNNER_IMAGE">dataopslive/dataops-transform-runner:5-stable</span></div><div>CI_SERVER_VERSION_PATCH: <span id="CI_SERVER_VERSION_PATCH">13</span></div><div>CI_COMMIT_TITLE: <span id="CI_COMMIT_TITLE">Update PREVIEW.md</span></div><div>DATAOPS_DATAPRODUCT_RUNNER_IMAGE: <span id="DATAOPS_DATAPRODUCT_RUNNER_IMAGE">dataopslive/dataops-data-product-definition-runner:5-stable</span></div><div>CI_PROJECT_ROOT_NAMESPACE: <span id="CI_PROJECT_ROOT_NAMESPACE">snowflake</span></div><div>DATAOPS_DBT_CLOUD_RUNNER_IMAGE: <span id="DATAOPS_DBT_CLOUD_RUNNER_IMAGE">dataopslive/dataops-dbt-cloud-runner:5-stable</span></div><div>DATAOPS_PERSISTENT_CACHE_DIR: <span id="DATAOPS_PERSISTENT_CACHE_DIR">/agent_cache/sfsehol-dry_run_build_ai_assistant_oct_vuifug</span></div><div>DATAOPS_DATAIKU_RUNNER_IMAGE: <span id="DATAOPS_DATAIKU_RUNNER_IMAGE">dataopslive/dataops-dataiku-runner:5-stable</span></div><div>CI_PROJECT_DIR: <span id="CI_PROJECT_DIR">/builds/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai</span></div><div>DATAOPS_ENV_NAME: <span id="DATAOPS_ENV_NAME">PROD</span></div><div>DATAOPS_SNOWFLAKE_RUNNER_IMAGE: <span id="DATAOPS_SNOWFLAKE_RUNNER_IMAGE">dataopslive/dataops-snowflake-runner:5-stable</span></div><div>DATAOPS_REFERENCE_PROJECT_URL: <span id="DATAOPS_REFERENCE_PROJECT_URL">https://gitlab-ci-token:64_zxYJ4tDkRF9xsFz1qaSX@app.dataops.live/reference-template-projects/dataops-template/dataops-reference.git</span></div><div>CI_RUNNER_ID: <span id="CI_RUNNER_ID">94363</span></div><div>CI_PIPELINE_CREATED_AT: <span id="CI_PIPELINE_CREATED_AT">2025-10-01T17:11:03+01:00</span></div><div>CI_COMMIT_TIMESTAMP: <span id="CI_COMMIT_TIMESTAMP">2025-10-01T01:21:29+01:00</span></div><div>CI_DISPOSABLE_ENVIRONMENT: <span id="CI_DISPOSABLE_ENVIRONMENT">true</span></div><div>CI_SERVER_SHELL_SSH_HOST: <span id="CI_SERVER_SHELL_SSH_HOST">app.dataops.live</span></div><div>DATAOPS_VAULTSPEED_RUNNER_IMAGE: <span id="DATAOPS_VAULTSPEED_RUNNER_IMAGE">dataopslive/dataops-vaultspeed-runner:5-stable</span></div><div>CI_JOB_JWT: <span id="CI_JOB_JWT">eyJraWQiOiJYSnE3S0M0dWFoU01vUEZRTTZXeE94eWVhcjJlV1Q4bmgzZ0xFcFlEcGFJIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJuYW1lc3BhY2VfaWQiOiIzNTU3OCIsIm5hbWVzcGFjZV9wYXRoIjoic25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMiLCJwcm9qZWN0X2lkIjoiMjEyNDciLCJwcm9qZWN0X3BhdGgiOiJzbm93Zmxha2UvaGFuZHMtb24tbGFicy9idWlsZC1hbi1haS1hc3Npc3RhbnQtZm9yLWZzaS11c2luZy1jb3J0ZXgtYW5kLWRvY3VtZW50YWkiLCJ1c2VyX2lkIjoiMjE5NCIsInVzZXJfbG9naW4iOiJhZG1pbi1hcHAtc2VydmljZS11c2VyIiwidXNlcl9lbWFpbCI6InNlcnZpY2UuYWRtaW4tYXBwQGRhdGFvcHMubGl2ZSIsInBpcGVsaW5lX2lkIjoiODM5MDgzMiIsInBpcGVsaW5lX3NvdXJjZSI6ImFwaSIsImpvYl9pZCI6IjY0NzIyNzA1IiwicmVmIjoibWFpbiIsInJlZl90eXBlIjoiYnJhbmNoIiwicmVmX3Byb3RlY3RlZCI6InRydWUiLCJqdGkiOiI1MGE2ZWI1NS03YWQxLTQ0NTAtODFhMC0wODlmNGE0Mzc1M2UiLCJpc3MiOiJhcHAuZGF0YW9wcy5saXZlIiwiaWF0IjoxNzU5MzM1MTA5LCJuYmYiOjE3NTkzMzUxMDQsImV4cCI6MTc1OTMzODcwOSwic3ViIjoiam9iXzY0NzIyNzA1In0.AYvIN-A28ucCUlHKAQ3plfBYq6aqOSnAnBmLzvUufKlzm9FLwhvSV8S2ZLfR0i0MLpyPssFNTkwBpgI1vJmbJ6tw6AvS3TIb-fkwIWdI1C4WZcj9s3yCf8dTd1czDm7aYLs6vhOIy0fAZn8fWaZraCSlkO0rgIhOicjvSPm1n3_WzneF3u362QqhnxSMo0uH_6cbihd9PO4p2HBF2jRB40xoN3uXciCP8t4F4OCVRhdcyfYTKF0c0R9SHD1HmZ3qUl8tP7OmQUMifhrltOTDlMV4UsLW5lFX-Fd3tnYGk7aFwP9CM2ldUbUWZgs8XNHg4nLd20GOEy1xN3sidnFm1A</span></div><div>CI_BUILD_ID: <span id="CI_BUILD_ID">64722705</span></div><div>DATAOPS_TMC_RUNNER_IMAGE: <span id="DATAOPS_TMC_RUNNER_IMAGE">dataopslive/dataops-tmc-runner:5-stable</span></div><div>CI_SERVER_PROTOCOL: <span id="CI_SERVER_PROTOCOL">https</span></div><div>DATAOPS_DATABASE_MASTER: <span id="DATAOPS_DATABASE_MASTER">DATAOPS_EVENT_PROD</span></div><div>CI_COMMIT_AUTHOR: <span id="CI_COMMIT_AUTHOR">Bryan Blanco Morales <bryan.blancomorales@snowflake.com></bryan.blancomorales@snowflake.com></span></div><div>DATAOPS_REFERENCE_PROJECT_VERSION: <span id="DATAOPS_REFERENCE_PROJECT_VERSION">v5.41.0</span></div><div>DATAOPS_MONTECARLO_RUNNER_IMAGE: <span id="DATAOPS_MONTECARLO_RUNNER_IMAGE">dataopslive/dataops-montecarlo-runner:5-stable</span></div><div>DATAOPS_INFORMATICA_CDGC_RUNNER_IMAGE: <span id="DATAOPS_INFORMATICA_CDGC_RUNNER_IMAGE">dataopslive/dataops-informaticacdgc-orchestrator:5-stable</span></div><div>CI_COMMIT_REF_NAME: <span id="CI_COMMIT_REF_NAME">main</span></div><div>CI_SERVER_HOST: <span id="CI_SERVER_HOST">app.dataops.live</span></div><div>CI_JOB_URL: <span id="CI_JOB_URL">https://app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai/-/jobs/64722705</span></div><div>CI_JOB_TOKEN: <span id="CI_JOB_TOKEN">64_zxYJ4tDkRF9xsFz1qaSX</span></div><div>CI_JOB_STARTED_AT: <span id="CI_JOB_STARTED_AT">2025-10-01T17:11:49+01:00</span></div><div>CI_CONCURRENT_ID: <span id="CI_CONCURRENT_ID">9</span></div><div>CI_BUILD_TOKEN: <span id="CI_BUILD_TOKEN">64_zxYJ4tDkRF9xsFz1qaSX</span></div><div>CI_PROJECT_DESCRIPTION: <span id="CI_PROJECT_DESCRIPTION">This lab will guide you through the process of preparing data (structured and unstructured) for a “Data” Agent, ultimately leading to powerful insights from all Enterprise data.</span></div><div>CI_COMMIT_BRANCH: <span id="CI_COMMIT_BRANCH">main</span></div><div>CI_PROJECT_CLASSIFICATION_LABEL: <span id="CI_PROJECT_CLASSIFICATION_LABEL"></span></div><div>CI_RUNNER_REVISION: <span id="CI_RUNNER_REVISION">09cc3351</span></div><div>DATAOPS_SNOWFLAKEOBJECTLIFECYCLE_RUNNER_IMAGE: <span id="DATAOPS_SNOWFLAKEOBJECTLIFECYCLE_RUNNER_IMAGE">dataopslive/dataops-snowflakeobjectlifecycle-runner:5-stable</span></div><div>CI_BUILD_BEFORE_SHA: <span id="CI_BUILD_BEFORE_SHA">0000000000000000000000000000000000000000</span></div><div>CI_DEPENDENCY_PROXY_USER: <span id="CI_DEPENDENCY_PROXY_USER">gitlab-ci-token</span></div><div>CI_PROJECT_PATH_SLUG: <span id="CI_PROJECT_PATH_SLUG">snowflake-hands-on-labs-build-an-ai-assistant-for-fsi-using-cor</span></div><div>CI_NODE_TOTAL: <span id="CI_NODE_TOTAL">1</span></div><div>DATAOPS_INFORMATICACLOUD_RUNNER_IMAGE: <span id="DATAOPS_INFORMATICACLOUD_RUNNER_IMAGE">dataopslive/dataops-informaticacloud-runner:5-stable</span></div><div>DATAOPS_SNOWPARKPYTHON_RUNNER_IMAGE: <span id="DATAOPS_SNOWPARKPYTHON_RUNNER_IMAGE">dataopslive/dataops-snowparkpython-runner:5-stable</span></div><div>CI_BUILDS_DIR: <span id="CI_BUILDS_DIR">/builds</span></div><div>CI_JOB_ID: <span id="CI_JOB_ID">64722705</span></div><div>DATAOPS_SNOWFLAKE_USER: <span id="DATAOPS_SNOWFLAKE_USER">DATAOPS_SERVICE_ADMIN</span></div><div>CI_PROJECT_REPOSITORY_LANGUAGES: <span id="CI_PROJECT_REPOSITORY_LANGUAGES">html,python,jupyter notebook,css,shell</span></div><div>DATAOPS_DATADOTWORLD_CATALOG_RUNNER_IMAGE: <span id="DATAOPS_DATADOTWORLD_CATALOG_RUNNER_IMAGE">dataopslive/dataops-datadotworldcatalog-orchestrator:5-stable</span></div><div>DATAOPS_AZURE_RUNNER_IMAGE: <span id="DATAOPS_AZURE_RUNNER_IMAGE">dataopslive/dataops-azure-runner:5-stable</span></div><div>CI_PROJECT_ID: <span id="CI_PROJECT_ID">21247</span></div><div>DATAOPS_STITCH_RUNNER_IMAGE: <span id="DATAOPS_STITCH_RUNNER_IMAGE">dataopslive/dataops-stitch-runner:5-stable</span></div><div>CI_JOB_IMAGE: <span id="CI_JOB_IMAGE">python:3</span></div><div>DATAOPS_AWS_RUNNER_IMAGE: <span id="DATAOPS_AWS_RUNNER_IMAGE">dataopslive/dataops-aws-runner:5-stable</span></div><div>CI_COMMIT_BEFORE_SHA: <span id="CI_COMMIT_BEFORE_SHA">0000000000000000000000000000000000000000</span></div><div>CI_PROJECT_TITLE: <span id="CI_PROJECT_TITLE">Build an AI Assistant for FSI using Cortex and Document AI</span></div><div>DATAOPS_BRANCH_NAME_PROD: <span id="DATAOPS_BRANCH_NAME_PROD">main</span></div><div>DATAOPS_SNOWFLAKE_KEY_PAIR: <span id="DATAOPS_SNOWFLAKE_KEY_PAIR">-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDyAstQ/1PavB2
+JPpwTkoHTGPioIDG5CrHzy3nZWB0mUnGcT9hoXKRsQ0tAvzRwD5AVzIIcIAGHBfi
+hsoh7ObdVQdmUudEWrNFrXkkrdUM8w4yulLT9M8d8s/BsyqAbLdKezLz7LvTEz/x
+UGrQO1gbM0Wr2qXh/s/S87NQbS62GAcwt5TtsEID45Pt8BbNCwlFu89N+jaYyHtc
+ObL30m+Qiw2gYU5b8Dsdn3ywM8xl4/PaZKTHrTxDM9RIM6m7SO4d/Ash5y1ML37a
+nKynG7vj/LgsDD1Gu3B0p8TVGlSSelvavW3Gzy/nUx6zUSQgbRDwYl0MVTRuZBz/
+chxiGjLDAgMBAAECggEAA9/koLu0uqqiIaRvtGNIQca4P1bv1X/UfOnTvb2a4BPc
+iunY2ETKsKlxWk+x0zDbyogvPE2FqxlJO7lxLKS0mPLC17qSSx8EZz+coyYxjjUN
+NeHMG9e/dZdFl07Fa487PWUcyAkKWo4J+OufgYl7H+au3UzRdZyGXmVmShQvFXlx
+WGV7u2xSKXQjvLjFH8Zjbjs8kv75Fv2abKXGXGfvpW5l4YdCO4sOVN546DUVrD0w
+zI3s4sxyz78hKB1Z5TRZko7HyWeCcxVn6WOjCY3/IeknoJISNkIfz0OjTwHSz4ET
+56mSZb5PcDBTZwliY96Gmi++XoaOruanEKrn7TahqQKBgQD6RaaR8+ei5x0bkiyn
+TDtq7RSZOpSqjKXvzpYvxXGerOIEoeDTi6B5j0B0WTYvVfQUiQzKHQ7WU984Ismd
+eKGPNKsXGjAQM2Q6U2zmFQCaePxz01Ud2LXtTBJfvn1tGLVGFdVFr5drng/Mc24n
+vIm2FJYCt93cvDxoANlC4ndFTwKBgQDIQyGQ6Mx0INxXbHDDrR66DemRnQ8UDGSV
+xHh7dpzPClZ4IgCgKEkR5218Q6YyzwbCv4jqHdJivQK3iJhuDOsdmOnaiCZ2yXny
+2pHJ42tT9xVHwZU3cecaRhoeGiO/72312FptTu+wDhiSIPC32YrWFGCr/dTb2V3+
+KKT4RB2GTQKBgEnjyHLs9OWWoHRkasSV8DD4gA1hS0UzM0ai0pqWC56SYkSF2o/6
+eE2LarcvI51EHkT11Y3SmG/U4WF8e9P/KovSO/UdKTWPRrclrFAdwUjaEYbMzSN7
+uPKvc/lKj1NnaRWhGo9xcR4302hEaDBZLLtSRpvU1y71cEwwe/SQUjBnAoGAa/Cj
+GvQfn0hG+2gbr5yUPzxYdH/vLKMxY/gt6H4aLw4nZUEOjUSpfdj7jkr4PdKQlk+e
+gHHqgAXYfQxG/KpB4AYXpg5UjRozfM6KXgMSSoOXGMIip2vhYKwAT9FPC5kF78jZ
+lKlDT+WJINpYZQAAcTsykAGUxZr3qpJFuPsd3tECgYEAnEGmzIsKxK+ODkvQ43cb
+p3lTkezAa/oYtSA1fygcHczlgJMwMwpHcLSpo0Ag/GpgwFodSI3Ag+ijizUcH2rE
+7Obm4bnDpTNPeFe3vdoKwue254oQpXNKTkE04qpL+APIpOmjTzIOVK0pbdv3/MYW
+yVFwFFlTrk7E3CvJbNQtrQ4=
+-----END PRIVATE KEY-----
+</span></div><div>DATAOPS_UTILS_RUNNER_IMAGE: <span id="DATAOPS_UTILS_RUNNER_IMAGE">dataopslive/dataops-utils-runner:5-stable</span></div><div>DATAOPS_JAVA8_RUNNER_IMAGE: <span id="DATAOPS_JAVA8_RUNNER_IMAGE">dataopslive/dataops-java8-runner:5-stable</span></div><div>CI_SERVER_VERSION_MAJOR: <span id="CI_SERVER_VERSION_MAJOR">15</span></div><div>DATAOPS_CATALOG_SALESFORCE_ID: <span id="DATAOPS_CATALOG_SALESFORCE_ID"></span></div><div>DATAOPS_SNOWFLAKE_AUTH: <span id="DATAOPS_SNOWFLAKE_AUTH">KEY_PAIR</span></div><div>DATAOPS_ENV_NAME_QA: <span id="DATAOPS_ENV_NAME_QA">QA</span></div><div>CI_CONFIG_PATH: <span id="CI_CONFIG_PATH">.gitlab-ci.yml</span></div><div>DATAOPS_NONDB_ENV_NAME: <span id="DATAOPS_NONDB_ENV_NAME">PROD</span></div><div>CI_BUILD_STAGE: <span id="CI_BUILD_STAGE">Pipeline Initialisation</span></div><div>CI_DEPENDENCY_PROXY_SERVER: <span id="CI_DEPENDENCY_PROXY_SERVER">app.dataops.live:443</span></div><div>CI_PROJECT_URL: <span id="CI_PROJECT_URL">https://app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai</span></div><div>DATAOPS_PYTHON3_11_RUNNER_IMAGE: <span id="DATAOPS_PYTHON3_11_RUNNER_IMAGE">dataopslive/dataops-python3-11-runner:5-stable</span></div><div id="dataopslive.plugin.data" style="display: none">{'DATAOPS_COALESCE_RUNNER_IMAGE': 'dataopslive/dataops-coalesce-runner:5-stable', 'DATAOPS_ENV_NAME_DEV': 'DEV', 'CI_PROJECT_NAMESPACE': 'snowflake/hands-on-labs', 'DATAOPS_DOCKER_RUNNER_IMAGE': 'dataopslive/dataops-docker-runner:5-stable', 'CI_RUNNER_VERSION': '14.9-3', 'DATAOPS_SODA_RUNNER_IMAGE': 'dataopslive/dataops-soda-runner:5-stable', 'CI_SERVER_NAME': 'GitLab', 'CI_RUNNER_DESCRIPTION': 'Pipeline runner for reconfigure event pipelines', 'CI_SERVER_REVISION': 'e82aa204c1d', 'CI_RUNNER_EXECUTABLE_ARCH': 'linux/amd64', 'CI_REGISTRY_USER': 'gitlab-ci-token', 'CI_API_V4_URL': 'https://app.dataops.live/api/v4', 'CI_RUNNER_SHORT_TOKEN': 'SWfAuLci', 'CI_JOB_NAME': 'Build Homepage', 'DATAOPS_DEBUG': '', 'DATAOPS_BASE_RUNNER_IMAGE': 'dataopslive/dataops-base-runner:5-stable', 'DATAOPS_FEATURE_BRANCH_NONDB_ENV_NAME': 'DEV', 'DATAOPS_ENV_NAME_PROD': 'PROD', 'CI_PROJECT_NAME': 'build-an-ai-assistant-for-fsi-using-cortex-and-documentai', 'CI_PIPELINE_SOURCE': 'api', 'CI_BUILD_REF_NAME': 'main', 'DATAOPS_MATILLION_RUNNER_IMAGE': 'dataopslive/dataops-matillion-runner:5-stable', 'DATAOPS_AUTOINGESTION_RUNNER_IMAGE': 'dataopslive/dataops-autoingestion-runner:5-stable', 'DATAOPS_PYTHON2_RUNNER_IMAGE': 'dataopslive/dataops-python2-runner:5-stable', 'CI_JOB_STATUS': 'running', 'DATAOPS_R_RUNNER_IMAGE': 'dataopslive/dataops-r-runner:5-stable', 'DATAOPS_BEFORE_SCRIPT_HAS_RUN': 'YES', 'CI_PIPELINE_ID': '8390832', 'CI_BUILD_REF_SLUG': 'main', 'CI_COMMIT_REF_SLUG': 'main', 'CI_SERVER': 'yes', 'DATAOPS_SNOWFLAKE_ACCOUNT': 'sfsehol-dry_run_build_ai_assistant_oct_vuifug', 'DATAOPS_DATABASE': 'DATAOPS_EVENT_PROD', 'CI_COMMIT_SHORT_SHA': '75631c20', 'CI_JOB_NAME_SLUG': 'build-homepage', 'DATAOPS_RUNNER_IMAGE_TAG': '5-stable', 'CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX': 'app.dataops.live:443/snowflake/dependency_proxy/containers', 'DATAOPS_COLLIBRA_RUNNER_IMAGE': 'dataopslive/dataops-collibra-runner:5-stable', 'DATAOPS_API_RUNNER_IMAGE': 'dataopslive/dataops-api-runner:5-stable', 'DATAOPS_DATADOTWORLD_RUNNER_IMAGE': 'dataopslive/dataops-datadotworld-runner:5-stable', 'DATAOPS_REFERENCE_PROJECT_DIR': 'reference-projects', 'DATAOPS_REPORTING_RUNNER_IMAGE': 'dataopslive/dataops-reporting-runner:5-stable', 'CI_RUNNER_TAGS': '["prod-quick-reconfigure-pipeline-runner-2023"]', 'CI_PROJECT_PATH': 'snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai', 'CI_SERVER_TLS_CA_FILE': '/builds/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai.tmp/CI_SERVER_TLS_CA_FILE', 'CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX': 'app.dataops.live:443/snowflake/hands-on-labs/dependency_proxy/containers', 'DATAOPS_FIVETRAN_RUNNER_IMAGE': 'dataopslive/dataops-fivetran-runner:5-stable', 'DATAOPS_GIT_RUNNER_IMAGE': 'dataopslive/dataops-git-runner:5-stable', 'DATAOPS_TAC_RUNNER_IMAGE': 'dataopslive/dataops-tac-runner:5-stable', 'CI_COMMIT_REF_PROTECTED': 'true', 'DATAOPS_TESTHARNESS_IMAGE': 'dataopslive/dataops-testharness-runner:5-stable', 'CI_API_GRAPHQL_URL': 'https://app.dataops.live/api/graphql', 'CI_SERVER_VERSION_MINOR': '11', 'CI_COMMIT_SHA': '75631c20d7791c4fa8af63621fe198657cf277f8', 'CI_PROJECT_VISIBILITY': 'private', 'CI_CONCURRENT_PROJECT_ID': '0', 'DATAOPS_PREFIX': 'DATAOPS_EVENT', 'CI_COMMIT_MESSAGE': 'Update PREVIEW.md', 'DATAOPS_REFERENCE_PROJECT_NAME': 'dataops-reference', 'DATAOPS_BRANCH_NAME_QA': 'qa', 'CI_SERVER_SHELL_SSH_PORT': '22', 'CI_JOB_JWT_V1': 'eyJraWQiOiJYSnE3S0M0dWFoU01vUEZRTTZXeE94eWVhcjJlV1Q4bmgzZ0xFcFlEcGFJIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJuYW1lc3BhY2VfaWQiOiIzNTU3OCIsIm5hbWVzcGFjZV9wYXRoIjoic25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMiLCJwcm9qZWN0X2lkIjoiMjEyNDciLCJwcm9qZWN0X3BhdGgiOiJzbm93Zmxha2UvaGFuZHMtb24tbGFicy9idWlsZC1hbi1haS1hc3Npc3RhbnQtZm9yLWZzaS11c2luZy1jb3J0ZXgtYW5kLWRvY3VtZW50YWkiLCJ1c2VyX2lkIjoiMjE5NCIsInVzZXJfbG9naW4iOiJhZG1pbi1hcHAtc2VydmljZS11c2VyIiwidXNlcl9lbWFpbCI6InNlcnZpY2UuYWRtaW4tYXBwQGRhdGFvcHMubGl2ZSIsInBpcGVsaW5lX2lkIjoiODM5MDgzMiIsInBpcGVsaW5lX3NvdXJjZSI6ImFwaSIsImpvYl9pZCI6IjY0NzIyNzA1IiwicmVmIjoibWFpbiIsInJlZl90eXBlIjoiYnJhbmNoIiwicmVmX3Byb3RlY3RlZCI6InRydWUiLCJqdGkiOiI1MGE2ZWI1NS03YWQxLTQ0NTAtODFhMC0wODlmNGE0Mzc1M2UiLCJpc3MiOiJhcHAuZGF0YW9wcy5saXZlIiwiaWF0IjoxNzU5MzM1MTA5LCJuYmYiOjE3NTkzMzUxMDQsImV4cCI6MTc1OTMzODcwOSwic3ViIjoiam9iXzY0NzIyNzA1In0.AYvIN-A28ucCUlHKAQ3plfBYq6aqOSnAnBmLzvUufKlzm9FLwhvSV8S2ZLfR0i0MLpyPssFNTkwBpgI1vJmbJ6tw6AvS3TIb-fkwIWdI1C4WZcj9s3yCf8dTd1czDm7aYLs6vhOIy0fAZn8fWaZraCSlkO0rgIhOicjvSPm1n3_WzneF3u362QqhnxSMo0uH_6cbihd9PO4p2HBF2jRB40xoN3uXciCP8t4F4OCVRhdcyfYTKF0c0R9SHD1HmZ3qUl8tP7OmQUMifhrltOTDlMV4UsLW5lFX-Fd3tnYGk7aFwP9CM2ldUbUWZgs8XNHg4nLd20GOEy1xN3sidnFm1A', 'CI_JOB_JWT_V2': 'eyJraWQiOiJYSnE3S0M0dWFoU01vUEZRTTZXeE94eWVhcjJlV1Q4bmgzZ0xFcFlEcGFJIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJuYW1lc3BhY2VfaWQiOiIzNTU3OCIsIm5hbWVzcGFjZV9wYXRoIjoic25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMiLCJwcm9qZWN0X2lkIjoiMjEyNDciLCJwcm9qZWN0X3BhdGgiOiJzbm93Zmxha2UvaGFuZHMtb24tbGFicy9idWlsZC1hbi1haS1hc3Npc3RhbnQtZm9yLWZzaS11c2luZy1jb3J0ZXgtYW5kLWRvY3VtZW50YWkiLCJ1c2VyX2lkIjoiMjE5NCIsInVzZXJfbG9naW4iOiJhZG1pbi1hcHAtc2VydmljZS11c2VyIiwidXNlcl9lbWFpbCI6InNlcnZpY2UuYWRtaW4tYXBwQGRhdGFvcHMubGl2ZSIsInBpcGVsaW5lX2lkIjoiODM5MDgzMiIsInBpcGVsaW5lX3NvdXJjZSI6ImFwaSIsImpvYl9pZCI6IjY0NzIyNzA1IiwicmVmIjoibWFpbiIsInJlZl90eXBlIjoiYnJhbmNoIiwicmVmX3Byb3RlY3RlZCI6InRydWUiLCJqdGkiOiI4MjdlYjdjYi00MjE0LTRiN2MtYjdiZi0xYTk4MmFmYjc3ODIiLCJpc3MiOiJodHRwczovL2FwcC5kYXRhb3BzLmxpdmUiLCJpYXQiOjE3NTkzMzUxMDksIm5iZiI6MTc1OTMzNTEwNCwiZXhwIjoxNzU5MzM4NzA5LCJzdWIiOiJwcm9qZWN0X3BhdGg6c25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMvYnVpbGQtYW4tYWktYXNzaXN0YW50LWZvci1mc2ktdXNpbmctY29ydGV4LWFuZC1kb2N1bWVudGFpOnJlZl90eXBlOmJyYW5jaDpyZWY6bWFpbiIsImF1ZCI6Imh0dHBzOi8vYXBwLmRhdGFvcHMubGl2ZSJ9.O3n5vVzuB0o7sv4YoV-aZAo7m3vbzuw-GBjFGIqB7yYPZLkAGDoBUjAiQIqHtWbCPZylLfY8OsyX_5Yhd7hEkOmeI8AExQ5LkuYdf5V2zpiy18LekFYfKWhMdLr9RDFj49sGu5GFMkIiwZfgqhgbStxU-1eGAHMk9x4JyhuWgty02vyNZ6Els_sa2uQHtka78rLtlsur7V5SYFvitTjQmH12Udw60dLCQR61PTd50jl1SWE20S2SQh0LtFORkuuo-7Tgj_WEs8efwCSoD4bIZfBNmE_n8qSyWUpZDu9XImUrScYMBi95jTGP5L2z0fymTy0VW34O-JMU-5b0_yGDRw', 'DATAOPS_REFERENCE_PROJECT_DOTENV_PATH': 'dataops-reference-vars.env', 'DATAOPS_STAGEINGESTION_RUNNER_IMAGE': 'dataopslive/dataops-stageingestion-runner:5-stable', 'CI_BUILD_NAME': 'Build Homepage', 'CI_PAGES_DOMAIN': 'example.com', 'DATAOPS_BRANCH_NAME_DEV': 'dev', 'CI_SERVER_VERSION': 'v15.11.13-250821-0852', 'CI_SERVER_PORT': '443', 'DATAOPS_ICON': 'https://dataops-public-assets.s3.eu-west-2.amazonaws.com/dataops-icon.png', 'CI_PROJECT_NAMESPACE_ID': '35578', 'DATAOPS_TERRAFORM_RUNNER_IMAGE': 'dataopslive/dataops-terraform-runner:5-stable', 'DATAOPS_PYTHON3_RUNNER_IMAGE': 'dataopslive/dataops-python3-runner:5-stable', 'CI_PAGES_URL': 'http://snowflake.example.com/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai', 'DATAOPS_VAULT_CONTENT': '/builds/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai/vault-content/vault.yml', 'CI_PIPELINE_IID': '3928', 'CI_REPOSITORY_URL': 'https://gitlab-ci-token:64_zxYJ4tDkRF9xsFz1qaSX@app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai.git', 'CI_SERVER_URL': 'https://app.dataops.live', 'DATAOPS_THOUGHTSPOT_RUNNER_IMAGE': 'dataopslive/dataops-thoughtspot-runner:5-stable', 'CI_COMMIT_DESCRIPTION': '', 'CI_TEMPLATE_REGISTRY_HOST': 'registry.gitlab.com', 'CI_JOB_STAGE': 'Pipeline Initialisation', 'CI_PIPELINE_URL': 'https://app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai/-/pipelines/8390832', 'CI_DEFAULT_BRANCH': 'main', 'DATAOPS_DATAPREP_RUNNER_IMAGE': 'dataopslive/dataops-dataprep-runner:5-stable', 'DATAOPS_SNOWPARKJAVA_RUNNER_IMAGE': 'dataopslive/dataops-snowparkjava-runner:5-stable', 'CI_BUILD_REF': '75631c20d7791c4fa8af63621fe198657cf277f8', 'DATAOPS_TRANSFORM_RUNNER_IMAGE': 'dataopslive/dataops-transform-runner:5-stable', 'CI_SERVER_VERSION_PATCH': '13', 'CI_COMMIT_TITLE': 'Update PREVIEW.md', 'DATAOPS_DATAPRODUCT_RUNNER_IMAGE': 'dataopslive/dataops-data-product-definition-runner:5-stable', 'CI_PROJECT_ROOT_NAMESPACE': 'snowflake', 'DATAOPS_DBT_CLOUD_RUNNER_IMAGE': 'dataopslive/dataops-dbt-cloud-runner:5-stable', 'DATAOPS_PERSISTENT_CACHE_DIR': '/agent_cache/sfsehol-dry_run_build_ai_assistant_oct_vuifug', 'DATAOPS_DATAIKU_RUNNER_IMAGE': 'dataopslive/dataops-dataiku-runner:5-stable', 'CI_PROJECT_DIR': '/builds/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai', 'DATAOPS_ENV_NAME': 'PROD', 'DATAOPS_SNOWFLAKE_RUNNER_IMAGE': 'dataopslive/dataops-snowflake-runner:5-stable', 'DATAOPS_REFERENCE_PROJECT_URL': 'https://gitlab-ci-token:64_zxYJ4tDkRF9xsFz1qaSX@app.dataops.live/reference-template-projects/dataops-template/dataops-reference.git', 'CI_RUNNER_ID': '94363', 'CI_PIPELINE_CREATED_AT': '2025-10-01T17:11:03+01:00', 'CI_COMMIT_TIMESTAMP': '2025-10-01T01:21:29+01:00', 'CI_DISPOSABLE_ENVIRONMENT': 'true', 'CI_SERVER_SHELL_SSH_HOST': 'app.dataops.live', 'DATAOPS_VAULTSPEED_RUNNER_IMAGE': 'dataopslive/dataops-vaultspeed-runner:5-stable', 'CI_JOB_JWT': 'eyJraWQiOiJYSnE3S0M0dWFoU01vUEZRTTZXeE94eWVhcjJlV1Q4bmgzZ0xFcFlEcGFJIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJuYW1lc3BhY2VfaWQiOiIzNTU3OCIsIm5hbWVzcGFjZV9wYXRoIjoic25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMiLCJwcm9qZWN0X2lkIjoiMjEyNDciLCJwcm9qZWN0X3BhdGgiOiJzbm93Zmxha2UvaGFuZHMtb24tbGFicy9idWlsZC1hbi1haS1hc3Npc3RhbnQtZm9yLWZzaS11c2luZy1jb3J0ZXgtYW5kLWRvY3VtZW50YWkiLCJ1c2VyX2lkIjoiMjE5NCIsInVzZXJfbG9naW4iOiJhZG1pbi1hcHAtc2VydmljZS11c2VyIiwidXNlcl9lbWFpbCI6InNlcnZpY2UuYWRtaW4tYXBwQGRhdGFvcHMubGl2ZSIsInBpcGVsaW5lX2lkIjoiODM5MDgzMiIsInBpcGVsaW5lX3NvdXJjZSI6ImFwaSIsImpvYl9pZCI6IjY0NzIyNzA1IiwicmVmIjoibWFpbiIsInJlZl90eXBlIjoiYnJhbmNoIiwicmVmX3Byb3RlY3RlZCI6InRydWUiLCJqdGkiOiI1MGE2ZWI1NS03YWQxLTQ0NTAtODFhMC0wODlmNGE0Mzc1M2UiLCJpc3MiOiJhcHAuZGF0YW9wcy5saXZlIiwiaWF0IjoxNzU5MzM1MTA5LCJuYmYiOjE3NTkzMzUxMDQsImV4cCI6MTc1OTMzODcwOSwic3ViIjoiam9iXzY0NzIyNzA1In0.AYvIN-A28ucCUlHKAQ3plfBYq6aqOSnAnBmLzvUufKlzm9FLwhvSV8S2ZLfR0i0MLpyPssFNTkwBpgI1vJmbJ6tw6AvS3TIb-fkwIWdI1C4WZcj9s3yCf8dTd1czDm7aYLs6vhOIy0fAZn8fWaZraCSlkO0rgIhOicjvSPm1n3_WzneF3u362QqhnxSMo0uH_6cbihd9PO4p2HBF2jRB40xoN3uXciCP8t4F4OCVRhdcyfYTKF0c0R9SHD1HmZ3qUl8tP7OmQUMifhrltOTDlMV4UsLW5lFX-Fd3tnYGk7aFwP9CM2ldUbUWZgs8XNHg4nLd20GOEy1xN3sidnFm1A', 'CI_BUILD_ID': '64722705', 'DATAOPS_TMC_RUNNER_IMAGE': 'dataopslive/dataops-tmc-runner:5-stable', 'CI_SERVER_PROTOCOL': 'https', 'DATAOPS_DATABASE_MASTER': 'DATAOPS_EVENT_PROD', 'CI_COMMIT_AUTHOR': 'Bryan Blanco Morales <bryan.blancomorales@snowflake.com>', 'DATAOPS_REFERENCE_PROJECT_VERSION': 'v5.41.0', 'DATAOPS_MONTECARLO_RUNNER_IMAGE': 'dataopslive/dataops-montecarlo-runner:5-stable', 'DATAOPS_INFORMATICA_CDGC_RUNNER_IMAGE': 'dataopslive/dataops-informaticacdgc-orchestrator:5-stable', 'CI_COMMIT_REF_NAME': 'main', 'CI_SERVER_HOST': 'app.dataops.live', 'CI_JOB_URL': 'https://app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai/-/jobs/64722705', 'CI_JOB_TOKEN': '64_zxYJ4tDkRF9xsFz1qaSX', 'CI_JOB_STARTED_AT': '2025-10-01T17:11:49+01:00', 'CI_CONCURRENT_ID': '9', 'CI_BUILD_TOKEN': '64_zxYJ4tDkRF9xsFz1qaSX', 'CI_PROJECT_DESCRIPTION': 'This lab will guide you through the process of preparing data (structured and unstructured) for a “Data” Agent, ultimately leading to powerful insights from all Enterprise data.', 'CI_COMMIT_BRANCH': 'main', 'CI_PROJECT_CLASSIFICATION_LABEL': '', 'CI_RUNNER_REVISION': '09cc3351', 'DATAOPS_SNOWFLAKEOBJECTLIFECYCLE_RUNNER_IMAGE': 'dataopslive/dataops-snowflakeobjectlifecycle-runner:5-stable', 'CI_BUILD_BEFORE_SHA': '0000000000000000000000000000000000000000', 'CI_DEPENDENCY_PROXY_USER': 'gitlab-ci-token', 'CI_PROJECT_PATH_SLUG': 'snowflake-hands-on-labs-build-an-ai-assistant-for-fsi-using-cor', 'CI_NODE_TOTAL': '1', 'DATAOPS_INFORMATICACLOUD_RUNNER_IMAGE': 'dataopslive/dataops-informaticacloud-runner:5-stable', 'DATAOPS_SNOWPARKPYTHON_RUNNER_IMAGE': 'dataopslive/dataops-snowparkpython-runner:5-stable', 'CI_BUILDS_DIR': '/builds', 'CI_JOB_ID': '64722705', 'DATAOPS_SNOWFLAKE_USER': 'DATAOPS_SERVICE_ADMIN', 'CI_PROJECT_REPOSITORY_LANGUAGES': 'html,python,jupyter notebook,css,shell', 'DATAOPS_DATADOTWORLD_CATALOG_RUNNER_IMAGE': 'dataopslive/dataops-datadotworldcatalog-orchestrator:5-stable', 'DATAOPS_AZURE_RUNNER_IMAGE': 'dataopslive/dataops-azure-runner:5-stable', 'CI_PROJECT_ID': '21247', 'DATAOPS_STITCH_RUNNER_IMAGE': 'dataopslive/dataops-stitch-runner:5-stable', 'CI_JOB_IMAGE': 'python:3', 'DATAOPS_AWS_RUNNER_IMAGE': 'dataopslive/dataops-aws-runner:5-stable', 'CI_COMMIT_BEFORE_SHA': '0000000000000000000000000000000000000000', 'CI_PROJECT_TITLE': 'Build an AI Assistant for FSI using Cortex and Document AI', 'DATAOPS_BRANCH_NAME_PROD': 'main', 'DATAOPS_SNOWFLAKE_KEY_PAIR': '-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDyAstQ/1PavB2\nJPpwTkoHTGPioIDG5CrHzy3nZWB0mUnGcT9hoXKRsQ0tAvzRwD5AVzIIcIAGHBfi\nhsoh7ObdVQdmUudEWrNFrXkkrdUM8w4yulLT9M8d8s/BsyqAbLdKezLz7LvTEz/x\nUGrQO1gbM0Wr2qXh/s/S87NQbS62GAcwt5TtsEID45Pt8BbNCwlFu89N+jaYyHtc\nObL30m+Qiw2gYU5b8Dsdn3ywM8xl4/PaZKTHrTxDM9RIM6m7SO4d/Ash5y1ML37a\nnKynG7vj/LgsDD1Gu3B0p8TVGlSSelvavW3Gzy/nUx6zUSQgbRDwYl0MVTRuZBz/\nchxiGjLDAgMBAAECggEAA9/koLu0uqqiIaRvtGNIQca4P1bv1X/UfOnTvb2a4BPc\niunY2ETKsKlxWk+x0zDbyogvPE2FqxlJO7lxLKS0mPLC17qSSx8EZz+coyYxjjUN\nNeHMG9e/dZdFl07Fa487PWUcyAkKWo4J+OufgYl7H+au3UzRdZyGXmVmShQvFXlx\nWGV7u2xSKXQjvLjFH8Zjbjs8kv75Fv2abKXGXGfvpW5l4YdCO4sOVN546DUVrD0w\nzI3s4sxyz78hKB1Z5TRZko7HyWeCcxVn6WOjCY3/IeknoJISNkIfz0OjTwHSz4ET\n56mSZb5PcDBTZwliY96Gmi++XoaOruanEKrn7TahqQKBgQD6RaaR8+ei5x0bkiyn\nTDtq7RSZOpSqjKXvzpYvxXGerOIEoeDTi6B5j0B0WTYvVfQUiQzKHQ7WU984Ismd\neKGPNKsXGjAQM2Q6U2zmFQCaePxz01Ud2LXtTBJfvn1tGLVGFdVFr5drng/Mc24n\nvIm2FJYCt93cvDxoANlC4ndFTwKBgQDIQyGQ6Mx0INxXbHDDrR66DemRnQ8UDGSV\nxHh7dpzPClZ4IgCgKEkR5218Q6YyzwbCv4jqHdJivQK3iJhuDOsdmOnaiCZ2yXny\n2pHJ42tT9xVHwZU3cecaRhoeGiO/72312FptTu+wDhiSIPC32YrWFGCr/dTb2V3+\nKKT4RB2GTQKBgEnjyHLs9OWWoHRkasSV8DD4gA1hS0UzM0ai0pqWC56SYkSF2o/6\neE2LarcvI51EHkT11Y3SmG/U4WF8e9P/KovSO/UdKTWPRrclrFAdwUjaEYbMzSN7\nuPKvc/lKj1NnaRWhGo9xcR4302hEaDBZLLtSRpvU1y71cEwwe/SQUjBnAoGAa/Cj\nGvQfn0hG+2gbr5yUPzxYdH/vLKMxY/gt6H4aLw4nZUEOjUSpfdj7jkr4PdKQlk+e\ngHHqgAXYfQxG/KpB4AYXpg5UjRozfM6KXgMSSoOXGMIip2vhYKwAT9FPC5kF78jZ\nlKlDT+WJINpYZQAAcTsykAGUxZr3qpJFuPsd3tECgYEAnEGmzIsKxK+ODkvQ43cb\np3lTkezAa/oYtSA1fygcHczlgJMwMwpHcLSpo0Ag/GpgwFodSI3Ag+ijizUcH2rE\n7Obm4bnDpTNPeFe3vdoKwue254oQpXNKTkE04qpL+APIpOmjTzIOVK0pbdv3/MYW\nyVFwFFlTrk7E3CvJbNQtrQ4=\n-----END PRIVATE KEY-----\n', 'DATAOPS_UTILS_RUNNER_IMAGE': 'dataopslive/dataops-utils-runner:5-stable', 'DATAOPS_JAVA8_RUNNER_IMAGE': 'dataopslive/dataops-java8-runner:5-stable', 'CI_SERVER_VERSION_MAJOR': '15', 'DATAOPS_CATALOG_SALESFORCE_ID': '', 'DATAOPS_SNOWFLAKE_AUTH': 'KEY_PAIR', 'DATAOPS_ENV_NAME_QA': 'QA', 'CI_CONFIG_PATH': '.gitlab-ci.yml', 'DATAOPS_NONDB_ENV_NAME': 'PROD', 'CI_BUILD_STAGE': 'Pipeline Initialisation', 'CI_DEPENDENCY_PROXY_SERVER': 'app.dataops.live:443', 'CI_PROJECT_URL': 'https://app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai', 'DATAOPS_PYTHON3_11_RUNNER_IMAGE': 'dataopslive/dataops-python3-11-runner:5-stable'}</bryan.blancomorales@snowflake.com></div>
+</div>
+<div style="background-color: #24323d; margin: 0; width: 100%; height: 74px"></div>
+
+<!-- Footer -->
+<div id="footer">
+  <!-- Powered by DataOps -->
+  <a id="powered-by-dataops" href="https://www.dataops.live" target="_blank" rel="noreferrer"><img height="41" src="assets/img/powered-by-dataops.png"></a>
+
+  <!-- TrueDataOps -->
+  <div id="true-dataops-link">
+    <a href="https://www.truedataops.org/" target="_blank" rel="noreferrer">#TrueDataOps</a>
+  </div>
+
+  <!-- DataOps for Dummies Ebook -->
+  <div id="dataops-for-dummies-link">
+    <a href="https://www.dataops.live/dataops-for-dummies-download" target="_blank" rel="noreferrer">DataOps for Dummies Ebook</a>
+  </div>
+</div>
+
+<!-- Load build details for debugging -->
+<script>
+  var dataopslive = {'DATAOPS_COALESCE_RUNNER_IMAGE': 'dataopslive/dataops-coalesce-runner:5-stable', 'DATAOPS_ENV_NAME_DEV': 'DEV', 'CI_PROJECT_NAMESPACE': 'snowflake/hands-on-labs', 'DATAOPS_DOCKER_RUNNER_IMAGE': 'dataopslive/dataops-docker-runner:5-stable', 'CI_RUNNER_VERSION': '14.9-3', 'DATAOPS_SODA_RUNNER_IMAGE': 'dataopslive/dataops-soda-runner:5-stable', 'CI_SERVER_NAME': 'GitLab', 'CI_RUNNER_DESCRIPTION': 'Pipeline runner for reconfigure event pipelines', 'CI_SERVER_REVISION': 'e82aa204c1d', 'CI_RUNNER_EXECUTABLE_ARCH': 'linux/amd64', 'CI_REGISTRY_USER': 'gitlab-ci-token', 'CI_API_V4_URL': 'https://app.dataops.live/api/v4', 'CI_RUNNER_SHORT_TOKEN': 'SWfAuLci', 'CI_JOB_NAME': 'Build Homepage', 'DATAOPS_DEBUG': '', 'DATAOPS_BASE_RUNNER_IMAGE': 'dataopslive/dataops-base-runner:5-stable', 'DATAOPS_FEATURE_BRANCH_NONDB_ENV_NAME': 'DEV', 'DATAOPS_ENV_NAME_PROD': 'PROD', 'CI_PROJECT_NAME': 'build-an-ai-assistant-for-fsi-using-cortex-and-documentai', 'CI_PIPELINE_SOURCE': 'api', 'CI_BUILD_REF_NAME': 'main', 'DATAOPS_MATILLION_RUNNER_IMAGE': 'dataopslive/dataops-matillion-runner:5-stable', 'DATAOPS_AUTOINGESTION_RUNNER_IMAGE': 'dataopslive/dataops-autoingestion-runner:5-stable', 'DATAOPS_PYTHON2_RUNNER_IMAGE': 'dataopslive/dataops-python2-runner:5-stable', 'CI_JOB_STATUS': 'running', 'DATAOPS_R_RUNNER_IMAGE': 'dataopslive/dataops-r-runner:5-stable', 'DATAOPS_BEFORE_SCRIPT_HAS_RUN': 'YES', 'CI_PIPELINE_ID': '8390832', 'CI_BUILD_REF_SLUG': 'main', 'CI_COMMIT_REF_SLUG': 'main', 'CI_SERVER': 'yes', 'DATAOPS_SNOWFLAKE_ACCOUNT': 'sfsehol-dry_run_build_ai_assistant_oct_vuifug', 'DATAOPS_DATABASE': 'DATAOPS_EVENT_PROD', 'CI_COMMIT_SHORT_SHA': '75631c20', 'CI_JOB_NAME_SLUG': 'build-homepage', 'DATAOPS_RUNNER_IMAGE_TAG': '5-stable', 'CI_DEPENDENCY_PROXY_GROUP_IMAGE_PREFIX': 'app.dataops.live:443/snowflake/dependency_proxy/containers', 'DATAOPS_COLLIBRA_RUNNER_IMAGE': 'dataopslive/dataops-collibra-runner:5-stable', 'DATAOPS_API_RUNNER_IMAGE': 'dataopslive/dataops-api-runner:5-stable', 'DATAOPS_DATADOTWORLD_RUNNER_IMAGE': 'dataopslive/dataops-datadotworld-runner:5-stable', 'DATAOPS_REFERENCE_PROJECT_DIR': 'reference-projects', 'DATAOPS_REPORTING_RUNNER_IMAGE': 'dataopslive/dataops-reporting-runner:5-stable', 'CI_RUNNER_TAGS': '["prod-quick-reconfigure-pipeline-runner-2023"]', 'CI_PROJECT_PATH': 'snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai', 'CI_SERVER_TLS_CA_FILE': '/builds/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai.tmp/CI_SERVER_TLS_CA_FILE', 'CI_DEPENDENCY_PROXY_DIRECT_GROUP_IMAGE_PREFIX': 'app.dataops.live:443/snowflake/hands-on-labs/dependency_proxy/containers', 'DATAOPS_FIVETRAN_RUNNER_IMAGE': 'dataopslive/dataops-fivetran-runner:5-stable', 'DATAOPS_GIT_RUNNER_IMAGE': 'dataopslive/dataops-git-runner:5-stable', 'DATAOPS_TAC_RUNNER_IMAGE': 'dataopslive/dataops-tac-runner:5-stable', 'CI_COMMIT_REF_PROTECTED': 'true', 'DATAOPS_TESTHARNESS_IMAGE': 'dataopslive/dataops-testharness-runner:5-stable', 'CI_API_GRAPHQL_URL': 'https://app.dataops.live/api/graphql', 'CI_SERVER_VERSION_MINOR': '11', 'CI_COMMIT_SHA': '75631c20d7791c4fa8af63621fe198657cf277f8', 'CI_PROJECT_VISIBILITY': 'private', 'CI_CONCURRENT_PROJECT_ID': '0', 'DATAOPS_PREFIX': 'DATAOPS_EVENT', 'CI_COMMIT_MESSAGE': 'Update PREVIEW.md', 'DATAOPS_REFERENCE_PROJECT_NAME': 'dataops-reference', 'DATAOPS_BRANCH_NAME_QA': 'qa', 'CI_SERVER_SHELL_SSH_PORT': '22', 'CI_JOB_JWT_V1': 'eyJraWQiOiJYSnE3S0M0dWFoU01vUEZRTTZXeE94eWVhcjJlV1Q4bmgzZ0xFcFlEcGFJIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJuYW1lc3BhY2VfaWQiOiIzNTU3OCIsIm5hbWVzcGFjZV9wYXRoIjoic25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMiLCJwcm9qZWN0X2lkIjoiMjEyNDciLCJwcm9qZWN0X3BhdGgiOiJzbm93Zmxha2UvaGFuZHMtb24tbGFicy9idWlsZC1hbi1haS1hc3Npc3RhbnQtZm9yLWZzaS11c2luZy1jb3J0ZXgtYW5kLWRvY3VtZW50YWkiLCJ1c2VyX2lkIjoiMjE5NCIsInVzZXJfbG9naW4iOiJhZG1pbi1hcHAtc2VydmljZS11c2VyIiwidXNlcl9lbWFpbCI6InNlcnZpY2UuYWRtaW4tYXBwQGRhdGFvcHMubGl2ZSIsInBpcGVsaW5lX2lkIjoiODM5MDgzMiIsInBpcGVsaW5lX3NvdXJjZSI6ImFwaSIsImpvYl9pZCI6IjY0NzIyNzA1IiwicmVmIjoibWFpbiIsInJlZl90eXBlIjoiYnJhbmNoIiwicmVmX3Byb3RlY3RlZCI6InRydWUiLCJqdGkiOiI1MGE2ZWI1NS03YWQxLTQ0NTAtODFhMC0wODlmNGE0Mzc1M2UiLCJpc3MiOiJhcHAuZGF0YW9wcy5saXZlIiwiaWF0IjoxNzU5MzM1MTA5LCJuYmYiOjE3NTkzMzUxMDQsImV4cCI6MTc1OTMzODcwOSwic3ViIjoiam9iXzY0NzIyNzA1In0.AYvIN-A28ucCUlHKAQ3plfBYq6aqOSnAnBmLzvUufKlzm9FLwhvSV8S2ZLfR0i0MLpyPssFNTkwBpgI1vJmbJ6tw6AvS3TIb-fkwIWdI1C4WZcj9s3yCf8dTd1czDm7aYLs6vhOIy0fAZn8fWaZraCSlkO0rgIhOicjvSPm1n3_WzneF3u362QqhnxSMo0uH_6cbihd9PO4p2HBF2jRB40xoN3uXciCP8t4F4OCVRhdcyfYTKF0c0R9SHD1HmZ3qUl8tP7OmQUMifhrltOTDlMV4UsLW5lFX-Fd3tnYGk7aFwP9CM2ldUbUWZgs8XNHg4nLd20GOEy1xN3sidnFm1A', 'CI_JOB_JWT_V2': 'eyJraWQiOiJYSnE3S0M0dWFoU01vUEZRTTZXeE94eWVhcjJlV1Q4bmgzZ0xFcFlEcGFJIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJuYW1lc3BhY2VfaWQiOiIzNTU3OCIsIm5hbWVzcGFjZV9wYXRoIjoic25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMiLCJwcm9qZWN0X2lkIjoiMjEyNDciLCJwcm9qZWN0X3BhdGgiOiJzbm93Zmxha2UvaGFuZHMtb24tbGFicy9idWlsZC1hbi1haS1hc3Npc3RhbnQtZm9yLWZzaS11c2luZy1jb3J0ZXgtYW5kLWRvY3VtZW50YWkiLCJ1c2VyX2lkIjoiMjE5NCIsInVzZXJfbG9naW4iOiJhZG1pbi1hcHAtc2VydmljZS11c2VyIiwidXNlcl9lbWFpbCI6InNlcnZpY2UuYWRtaW4tYXBwQGRhdGFvcHMubGl2ZSIsInBpcGVsaW5lX2lkIjoiODM5MDgzMiIsInBpcGVsaW5lX3NvdXJjZSI6ImFwaSIsImpvYl9pZCI6IjY0NzIyNzA1IiwicmVmIjoibWFpbiIsInJlZl90eXBlIjoiYnJhbmNoIiwicmVmX3Byb3RlY3RlZCI6InRydWUiLCJqdGkiOiI4MjdlYjdjYi00MjE0LTRiN2MtYjdiZi0xYTk4MmFmYjc3ODIiLCJpc3MiOiJodHRwczovL2FwcC5kYXRhb3BzLmxpdmUiLCJpYXQiOjE3NTkzMzUxMDksIm5iZiI6MTc1OTMzNTEwNCwiZXhwIjoxNzU5MzM4NzA5LCJzdWIiOiJwcm9qZWN0X3BhdGg6c25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMvYnVpbGQtYW4tYWktYXNzaXN0YW50LWZvci1mc2ktdXNpbmctY29ydGV4LWFuZC1kb2N1bWVudGFpOnJlZl90eXBlOmJyYW5jaDpyZWY6bWFpbiIsImF1ZCI6Imh0dHBzOi8vYXBwLmRhdGFvcHMubGl2ZSJ9.O3n5vVzuB0o7sv4YoV-aZAo7m3vbzuw-GBjFGIqB7yYPZLkAGDoBUjAiQIqHtWbCPZylLfY8OsyX_5Yhd7hEkOmeI8AExQ5LkuYdf5V2zpiy18LekFYfKWhMdLr9RDFj49sGu5GFMkIiwZfgqhgbStxU-1eGAHMk9x4JyhuWgty02vyNZ6Els_sa2uQHtka78rLtlsur7V5SYFvitTjQmH12Udw60dLCQR61PTd50jl1SWE20S2SQh0LtFORkuuo-7Tgj_WEs8efwCSoD4bIZfBNmE_n8qSyWUpZDu9XImUrScYMBi95jTGP5L2z0fymTy0VW34O-JMU-5b0_yGDRw', 'DATAOPS_REFERENCE_PROJECT_DOTENV_PATH': 'dataops-reference-vars.env', 'DATAOPS_STAGEINGESTION_RUNNER_IMAGE': 'dataopslive/dataops-stageingestion-runner:5-stable', 'CI_BUILD_NAME': 'Build Homepage', 'CI_PAGES_DOMAIN': 'example.com', 'DATAOPS_BRANCH_NAME_DEV': 'dev', 'CI_SERVER_VERSION': 'v15.11.13-250821-0852', 'CI_SERVER_PORT': '443', 'DATAOPS_ICON': 'https://dataops-public-assets.s3.eu-west-2.amazonaws.com/dataops-icon.png', 'CI_PROJECT_NAMESPACE_ID': '35578', 'DATAOPS_TERRAFORM_RUNNER_IMAGE': 'dataopslive/dataops-terraform-runner:5-stable', 'DATAOPS_PYTHON3_RUNNER_IMAGE': 'dataopslive/dataops-python3-runner:5-stable', 'CI_PAGES_URL': 'http://snowflake.example.com/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai', 'DATAOPS_VAULT_CONTENT': '/builds/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai/vault-content/vault.yml', 'CI_PIPELINE_IID': '3928', 'CI_REPOSITORY_URL': 'https://gitlab-ci-token:64_zxYJ4tDkRF9xsFz1qaSX@app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai.git', 'CI_SERVER_URL': 'https://app.dataops.live', 'DATAOPS_THOUGHTSPOT_RUNNER_IMAGE': 'dataopslive/dataops-thoughtspot-runner:5-stable', 'CI_COMMIT_DESCRIPTION': '', 'CI_TEMPLATE_REGISTRY_HOST': 'registry.gitlab.com', 'CI_JOB_STAGE': 'Pipeline Initialisation', 'CI_PIPELINE_URL': 'https://app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai/-/pipelines/8390832', 'CI_DEFAULT_BRANCH': 'main', 'DATAOPS_DATAPREP_RUNNER_IMAGE': 'dataopslive/dataops-dataprep-runner:5-stable', 'DATAOPS_SNOWPARKJAVA_RUNNER_IMAGE': 'dataopslive/dataops-snowparkjava-runner:5-stable', 'CI_BUILD_REF': '75631c20d7791c4fa8af63621fe198657cf277f8', 'DATAOPS_TRANSFORM_RUNNER_IMAGE': 'dataopslive/dataops-transform-runner:5-stable', 'CI_SERVER_VERSION_PATCH': '13', 'CI_COMMIT_TITLE': 'Update PREVIEW.md', 'DATAOPS_DATAPRODUCT_RUNNER_IMAGE': 'dataopslive/dataops-data-product-definition-runner:5-stable', 'CI_PROJECT_ROOT_NAMESPACE': 'snowflake', 'DATAOPS_DBT_CLOUD_RUNNER_IMAGE': 'dataopslive/dataops-dbt-cloud-runner:5-stable', 'DATAOPS_PERSISTENT_CACHE_DIR': '/agent_cache/sfsehol-dry_run_build_ai_assistant_oct_vuifug', 'DATAOPS_DATAIKU_RUNNER_IMAGE': 'dataopslive/dataops-dataiku-runner:5-stable', 'CI_PROJECT_DIR': '/builds/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai', 'DATAOPS_ENV_NAME': 'PROD', 'DATAOPS_SNOWFLAKE_RUNNER_IMAGE': 'dataopslive/dataops-snowflake-runner:5-stable', 'DATAOPS_REFERENCE_PROJECT_URL': 'https://gitlab-ci-token:64_zxYJ4tDkRF9xsFz1qaSX@app.dataops.live/reference-template-projects/dataops-template/dataops-reference.git', 'CI_RUNNER_ID': '94363', 'CI_PIPELINE_CREATED_AT': '2025-10-01T17:11:03+01:00', 'CI_COMMIT_TIMESTAMP': '2025-10-01T01:21:29+01:00', 'CI_DISPOSABLE_ENVIRONMENT': 'true', 'CI_SERVER_SHELL_SSH_HOST': 'app.dataops.live', 'DATAOPS_VAULTSPEED_RUNNER_IMAGE': 'dataopslive/dataops-vaultspeed-runner:5-stable', 'CI_JOB_JWT': 'eyJraWQiOiJYSnE3S0M0dWFoU01vUEZRTTZXeE94eWVhcjJlV1Q4bmgzZ0xFcFlEcGFJIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJuYW1lc3BhY2VfaWQiOiIzNTU3OCIsIm5hbWVzcGFjZV9wYXRoIjoic25vd2ZsYWtlL2hhbmRzLW9uLWxhYnMiLCJwcm9qZWN0X2lkIjoiMjEyNDciLCJwcm9qZWN0X3BhdGgiOiJzbm93Zmxha2UvaGFuZHMtb24tbGFicy9idWlsZC1hbi1haS1hc3Npc3RhbnQtZm9yLWZzaS11c2luZy1jb3J0ZXgtYW5kLWRvY3VtZW50YWkiLCJ1c2VyX2lkIjoiMjE5NCIsInVzZXJfbG9naW4iOiJhZG1pbi1hcHAtc2VydmljZS11c2VyIiwidXNlcl9lbWFpbCI6InNlcnZpY2UuYWRtaW4tYXBwQGRhdGFvcHMubGl2ZSIsInBpcGVsaW5lX2lkIjoiODM5MDgzMiIsInBpcGVsaW5lX3NvdXJjZSI6ImFwaSIsImpvYl9pZCI6IjY0NzIyNzA1IiwicmVmIjoibWFpbiIsInJlZl90eXBlIjoiYnJhbmNoIiwicmVmX3Byb3RlY3RlZCI6InRydWUiLCJqdGkiOiI1MGE2ZWI1NS03YWQxLTQ0NTAtODFhMC0wODlmNGE0Mzc1M2UiLCJpc3MiOiJhcHAuZGF0YW9wcy5saXZlIiwiaWF0IjoxNzU5MzM1MTA5LCJuYmYiOjE3NTkzMzUxMDQsImV4cCI6MTc1OTMzODcwOSwic3ViIjoiam9iXzY0NzIyNzA1In0.AYvIN-A28ucCUlHKAQ3plfBYq6aqOSnAnBmLzvUufKlzm9FLwhvSV8S2ZLfR0i0MLpyPssFNTkwBpgI1vJmbJ6tw6AvS3TIb-fkwIWdI1C4WZcj9s3yCf8dTd1czDm7aYLs6vhOIy0fAZn8fWaZraCSlkO0rgIhOicjvSPm1n3_WzneF3u362QqhnxSMo0uH_6cbihd9PO4p2HBF2jRB40xoN3uXciCP8t4F4OCVRhdcyfYTKF0c0R9SHD1HmZ3qUl8tP7OmQUMifhrltOTDlMV4UsLW5lFX-Fd3tnYGk7aFwP9CM2ldUbUWZgs8XNHg4nLd20GOEy1xN3sidnFm1A', 'CI_BUILD_ID': '64722705', 'DATAOPS_TMC_RUNNER_IMAGE': 'dataopslive/dataops-tmc-runner:5-stable', 'CI_SERVER_PROTOCOL': 'https', 'DATAOPS_DATABASE_MASTER': 'DATAOPS_EVENT_PROD', 'CI_COMMIT_AUTHOR': 'Bryan Blanco Morales <bryan.blancomorales@snowflake.com>', 'DATAOPS_REFERENCE_PROJECT_VERSION': 'v5.41.0', 'DATAOPS_MONTECARLO_RUNNER_IMAGE': 'dataopslive/dataops-montecarlo-runner:5-stable', 'DATAOPS_INFORMATICA_CDGC_RUNNER_IMAGE': 'dataopslive/dataops-informaticacdgc-orchestrator:5-stable', 'CI_COMMIT_REF_NAME': 'main', 'CI_SERVER_HOST': 'app.dataops.live', 'CI_JOB_URL': 'https://app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai/-/jobs/64722705', 'CI_JOB_TOKEN': '64_zxYJ4tDkRF9xsFz1qaSX', 'CI_JOB_STARTED_AT': '2025-10-01T17:11:49+01:00', 'CI_CONCURRENT_ID': '9', 'CI_BUILD_TOKEN': '64_zxYJ4tDkRF9xsFz1qaSX', 'CI_PROJECT_DESCRIPTION': 'This lab will guide you through the process of preparing data (structured and unstructured) for a “Data” Agent, ultimately leading to powerful insights from all Enterprise data.', 'CI_COMMIT_BRANCH': 'main', 'CI_PROJECT_CLASSIFICATION_LABEL': '', 'CI_RUNNER_REVISION': '09cc3351', 'DATAOPS_SNOWFLAKEOBJECTLIFECYCLE_RUNNER_IMAGE': 'dataopslive/dataops-snowflakeobjectlifecycle-runner:5-stable', 'CI_BUILD_BEFORE_SHA': '0000000000000000000000000000000000000000', 'CI_DEPENDENCY_PROXY_USER': 'gitlab-ci-token', 'CI_PROJECT_PATH_SLUG': 'snowflake-hands-on-labs-build-an-ai-assistant-for-fsi-using-cor', 'CI_NODE_TOTAL': '1', 'DATAOPS_INFORMATICACLOUD_RUNNER_IMAGE': 'dataopslive/dataops-informaticacloud-runner:5-stable', 'DATAOPS_SNOWPARKPYTHON_RUNNER_IMAGE': 'dataopslive/dataops-snowparkpython-runner:5-stable', 'CI_BUILDS_DIR': '/builds', 'CI_JOB_ID': '64722705', 'DATAOPS_SNOWFLAKE_USER': 'DATAOPS_SERVICE_ADMIN', 'CI_PROJECT_REPOSITORY_LANGUAGES': 'html,python,jupyter notebook,css,shell', 'DATAOPS_DATADOTWORLD_CATALOG_RUNNER_IMAGE': 'dataopslive/dataops-datadotworldcatalog-orchestrator:5-stable', 'DATAOPS_AZURE_RUNNER_IMAGE': 'dataopslive/dataops-azure-runner:5-stable', 'CI_PROJECT_ID': '21247', 'DATAOPS_STITCH_RUNNER_IMAGE': 'dataopslive/dataops-stitch-runner:5-stable', 'CI_JOB_IMAGE': 'python:3', 'DATAOPS_AWS_RUNNER_IMAGE': 'dataopslive/dataops-aws-runner:5-stable', 'CI_COMMIT_BEFORE_SHA': '0000000000000000000000000000000000000000', 'CI_PROJECT_TITLE': 'Build an AI Assistant for FSI using Cortex and Document AI', 'DATAOPS_BRANCH_NAME_PROD': 'main', 'DATAOPS_SNOWFLAKE_KEY_PAIR': '-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDyAstQ/1PavB2\nJPpwTkoHTGPioIDG5CrHzy3nZWB0mUnGcT9hoXKRsQ0tAvzRwD5AVzIIcIAGHBfi\nhsoh7ObdVQdmUudEWrNFrXkkrdUM8w4yulLT9M8d8s/BsyqAbLdKezLz7LvTEz/x\nUGrQO1gbM0Wr2qXh/s/S87NQbS62GAcwt5TtsEID45Pt8BbNCwlFu89N+jaYyHtc\nObL30m+Qiw2gYU5b8Dsdn3ywM8xl4/PaZKTHrTxDM9RIM6m7SO4d/Ash5y1ML37a\nnKynG7vj/LgsDD1Gu3B0p8TVGlSSelvavW3Gzy/nUx6zUSQgbRDwYl0MVTRuZBz/\nchxiGjLDAgMBAAECggEAA9/koLu0uqqiIaRvtGNIQca4P1bv1X/UfOnTvb2a4BPc\niunY2ETKsKlxWk+x0zDbyogvPE2FqxlJO7lxLKS0mPLC17qSSx8EZz+coyYxjjUN\nNeHMG9e/dZdFl07Fa487PWUcyAkKWo4J+OufgYl7H+au3UzRdZyGXmVmShQvFXlx\nWGV7u2xSKXQjvLjFH8Zjbjs8kv75Fv2abKXGXGfvpW5l4YdCO4sOVN546DUVrD0w\nzI3s4sxyz78hKB1Z5TRZko7HyWeCcxVn6WOjCY3/IeknoJISNkIfz0OjTwHSz4ET\n56mSZb5PcDBTZwliY96Gmi++XoaOruanEKrn7TahqQKBgQD6RaaR8+ei5x0bkiyn\nTDtq7RSZOpSqjKXvzpYvxXGerOIEoeDTi6B5j0B0WTYvVfQUiQzKHQ7WU984Ismd\neKGPNKsXGjAQM2Q6U2zmFQCaePxz01Ud2LXtTBJfvn1tGLVGFdVFr5drng/Mc24n\nvIm2FJYCt93cvDxoANlC4ndFTwKBgQDIQyGQ6Mx0INxXbHDDrR66DemRnQ8UDGSV\nxHh7dpzPClZ4IgCgKEkR5218Q6YyzwbCv4jqHdJivQK3iJhuDOsdmOnaiCZ2yXny\n2pHJ42tT9xVHwZU3cecaRhoeGiO/72312FptTu+wDhiSIPC32YrWFGCr/dTb2V3+\nKKT4RB2GTQKBgEnjyHLs9OWWoHRkasSV8DD4gA1hS0UzM0ai0pqWC56SYkSF2o/6\neE2LarcvI51EHkT11Y3SmG/U4WF8e9P/KovSO/UdKTWPRrclrFAdwUjaEYbMzSN7\nuPKvc/lKj1NnaRWhGo9xcR4302hEaDBZLLtSRpvU1y71cEwwe/SQUjBnAoGAa/Cj\nGvQfn0hG+2gbr5yUPzxYdH/vLKMxY/gt6H4aLw4nZUEOjUSpfdj7jkr4PdKQlk+e\ngHHqgAXYfQxG/KpB4AYXpg5UjRozfM6KXgMSSoOXGMIip2vhYKwAT9FPC5kF78jZ\nlKlDT+WJINpYZQAAcTsykAGUxZr3qpJFuPsd3tECgYEAnEGmzIsKxK+ODkvQ43cb\np3lTkezAa/oYtSA1fygcHczlgJMwMwpHcLSpo0Ag/GpgwFodSI3Ag+ijizUcH2rE\n7Obm4bnDpTNPeFe3vdoKwue254oQpXNKTkE04qpL+APIpOmjTzIOVK0pbdv3/MYW\nyVFwFFlTrk7E3CvJbNQtrQ4=\n-----END PRIVATE KEY-----\n', 'DATAOPS_UTILS_RUNNER_IMAGE': 'dataopslive/dataops-utils-runner:5-stable', 'DATAOPS_JAVA8_RUNNER_IMAGE': 'dataopslive/dataops-java8-runner:5-stable', 'CI_SERVER_VERSION_MAJOR': '15', 'DATAOPS_CATALOG_SALESFORCE_ID': '', 'DATAOPS_SNOWFLAKE_AUTH': 'KEY_PAIR', 'DATAOPS_ENV_NAME_QA': 'QA', 'CI_CONFIG_PATH': '.gitlab-ci.yml', 'DATAOPS_NONDB_ENV_NAME': 'PROD', 'CI_BUILD_STAGE': 'Pipeline Initialisation', 'CI_DEPENDENCY_PROXY_SERVER': 'app.dataops.live:443', 'CI_PROJECT_URL': 'https://app.dataops.live/snowflake/hands-on-labs/build-an-ai-assistant-for-fsi-using-cortex-and-documentai', 'DATAOPS_PYTHON3_11_RUNNER_IMAGE': 'dataopslive/dataops-python3-11-runner:5-stable'}
+  let toggle = () => {
+    let element = document.getElementById("build-details");
+    let hidden = element.getAttribute("hidden");
+
+    if (hidden) {
+      element.removeAttribute("hidden");
+    } else {
+      element.setAttribute("hidden", "hidden");
+    }
+  };
+
+  const mkdocsFooter = document.getElementsByClassName("md-footer-meta")[0];
+  mkdocsFooter.remove();
+</script>
+<style>
+  .dataops-link:hover {
+    color: white;
+  }
+</style>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "content.tabs.link", "content.code.copy", "content.code.annotation", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections"], "search": "../javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+        <script src="../javascripts/button-click-tracking.js"></script>
+      
+        <script src="../javascripts/collapsed-code.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

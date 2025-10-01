@@ -1,0 +1,67 @@
+.collapse-code {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.collapsed {
+  max-height: 6rem;
+  overflow: hidden;
+}
+
+.collapse-code > pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.collapse-code > input {
+  display: none;
+}
+
+.code-footer {
+  height: 2rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    var(--md-default-bg-color) 80% 90%
+  );
+}
+
+.expand {
+  display: visible;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.6rem;
+  background: url("../img/expand-icon.svg") no-repeat center;
+  background-size: auto 100%;
+  width: 0.9rem;
+  height: 0.9rem;
+  opacity: 0.25;
+  z-index: 1;
+}
+
+.expand:hover {
+  opacity: 0.6;
+  transition: opacity 300ms linear;
+}
+
+.collapse {
+  display: none;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.6rem;
+  background: url("../img/collapse-icon.svg") no-repeat center;
+  background-size: auto 100%;
+  width: 0.85rem;
+  height: 0.85rem;
+  opacity: 0.25;
+}
+
+.collapse:hover {
+  opacity: 0.6;
+  transition: opacity 300ms linear;
+}

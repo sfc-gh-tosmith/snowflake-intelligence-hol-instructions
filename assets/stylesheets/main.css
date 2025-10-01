@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+body {
+  /* background-color: #ffffff; */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --md-primary-fg-color: #249edc;
+  --md-primary-fg-color--light: #249edc;
+  --md-primary-fg-color--dark: #11567f;
+  --md-typeset-a-color: #249edc;
+  --md-primary-bg-color: #ffffff;
+}
+
+.md-nav__link[for]:focus,
+.md-nav__link[for]:hover,
+.md-nav__link[href]:focus,
+.md-nav__link[href]:hover {
+  color: #249edc;
+}
+.md-nav__link--active {
+  font-weight: 600;
+}
+
+.new {
+  color: rgb(14, 108, 192);
+}
+
+.md-button.rounded {
+  border-radius: 5px;
+}
+
+.md-button.md-button--primary:hover {
+  background-color: #3ebeff;
+  border-color: #3ebeff;
+}

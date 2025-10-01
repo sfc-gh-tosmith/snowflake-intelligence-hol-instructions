@@ -1,0 +1,54 @@
+#build-details {
+  background-color: #24323d;
+  color: #8eabc2;
+  width: 100%;
+}
+
+#footer {
+  z-index: 20;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding-right: 24px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  background-color: rgb(36 50 61);
+  display: flex;
+  align-items: center;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+#powered-by-dataops {
+  height: 41px;
+}
+
+#powered-by-dataops > img {
+  margin-right: 8px;
+}
+
+#true-dataops-link {
+  color: rgb(243 244 246);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-left-style: solid;
+  border-color: rgb(135 133 141);
+  border-left-width: 1px;
+}
+
+#dataops-for-dummies-link {
+  color: rgb(243 244 246);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-left-style: solid;
+  border-color: rgb(135 133 141);
+  border-left-width: 1px;
+}

@@ -1,0 +1,1976 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Print Site - Snowflake Lab Platform</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/print-site.css">
+    
+      <link rel="stylesheet" href="css/print-site-material.css">
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/header.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/footer.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/collapsed-code.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/build-badge.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/customer-logo.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/snowsight-button.css">
+    
+    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="light-blue" data-md-color-primary="custom" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#section-1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+       
+
+<!-- Header -->
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav
+    class="md-header__inner dataops-header"
+    aria-label="Header"
+  >
+    <!-- DataOps.live app switcher -->
+    <div class="app-switcher">
+      <!-- Switcher button -->
+      <button
+        onclick="onAppSwitcherClick()"
+        id="app-switcher-button"
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded="false"
+        data-headlessui-state=""
+      >
+        <img width="20" src="assets/img/dot-grid.svg" />
+      </button>
+
+      <!-- Options -->
+      <ul
+        class="app-switcher-options hidden"
+        aria-labelledby="headlessui-listbox-button-:r0:"
+        aria-orientation="vertical"
+        id="app-switcher-options"
+        role="listbox"
+        tabindex="0"
+        data-headlessui-state="open"
+      >
+        <li
+          id="headlessui-listbox-option-:r1h:"
+          role="option"
+          tabindex="-1"
+          aria-selected="false"
+          data-headlessui-state=""
+        >
+          <a
+            href="https://app.dataops.live"
+            target="_self"
+            rel="noreferrer"
+            class="block truncate font-normal"
+            >Operate</a
+          >
+        </li>
+        <li
+          id="headlessui-listbox-option-:r1i:"
+          role="option"
+          tabindex="-1"
+          aria-selected="false"
+          data-headlessui-state=""
+        >
+          <a
+            href="https://observability.dataops.live"
+            target="_self"
+            rel="noreferrer"
+            class="block truncate font-normal"
+            >Observe</a
+          >
+        </li>
+        <li
+          id="headlessui-listbox-option-:r1j:"
+          role="option"
+          tabindex="-1"
+          aria-selected="false"
+          data-headlessui-state=""
+        >
+          <a
+            href="https://docs.dataops.live/"
+            target="_blank"
+            rel="noreferrer"
+            class="block truncate font-normal"
+            >Learn</a
+          >
+        </li>
+        <li
+          id="headlessui-listbox-option-:r1k:"
+          role="option"
+          tabindex="-1"
+          aria-selected="false"
+          data-headlessui-state=""
+        >
+          <a
+            href="https://community.dataops.live/"
+            target="_blank"
+            rel="noreferrer"
+            class="block truncate font-normal"
+            >Engage</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- DataOps.live logo -->
+    <div class="dataops-logo-container">
+      <a
+        href="https://www.dataops.live/snowflake"
+        target="_blank"
+        rel="noreferrer"
+        ><img
+          height="32"
+          src="assets/img/dataops-logo-with-tagline.svg"
+          alt="DataOps.live"
+      /></a>
+    </div>
+
+    <!-- portal logo -->
+    <div class="portal-logo-container">
+      <a href=""
+        ><img
+          height="25"
+          src=""
+          alt=""
+      /></a>
+    </div>
+
+    <!-- Portal name -->
+    <div class="portal-name">
+      <a href="/"></a>
+    </div>
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis"> Snowflake Lab Platform </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+             Print Site 
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color palette toggle -->
+     
+    <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light-blue" data-md-color-primary="custom" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>  
+
+    <!-- User preference: color palette -->
+     <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script> 
+
+    <!-- Site language selector -->
+    
+
+    <!-- Button to open search modal -->
+    
+    <label class="md-header__button md-icon" for="__search">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+    </label>
+
+    <!-- Search interface -->
+    <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+    <!-- Repository information -->
+    
+  </nav>
+
+  <!-- Navigation tabs (sticky) -->
+    
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="index.html" class="md-tabs__link">
+          
+  
+  
+  Welcome
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="Logging_in.html" class="md-tabs__link">
+          
+  
+  
+  Lab Steps
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>  
+</header>
+
+<script>
+  function onAppSwitcherClick() {
+    const appSwitcherButton = document.getElementById("app-switcher-button");
+    const appSwitcherPanel = document.getElementById("app-switcher-options");
+    appSwitcherButton.classList.toggle("app-switcher-active");
+    appSwitcherPanel.classList.toggle("hidden");
+  }
+</script>
+
+<!-- Close the app switcher panel is the user clicks away -->
+<script>
+  window.addEventListener("click", function (e) {
+    const appSwitcherButton = document.getElementById("app-switcher-button");
+    const appSwitcherPanel = document.getElementById("app-switcher-options");
+
+    if (
+      !appSwitcherButton.contains(e.target) &&
+      !appSwitcherPanel.contains(e.target)
+    ) {
+      appSwitcherButton.classList.remove("app-switcher-active");
+      appSwitcherPanel.classList.add("hidden");
+    }
+  });
+</script>
+
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Snowflake Lab Platform" class="md-nav__button md-logo" aria-label="Snowflake Lab Platform" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Snowflake Lab Platform
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build an AI Assistant for FSI using Cortex and Document AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lab Steps
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Lab Steps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Logging_in.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Logging in and Cortex Playground
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Unstructured Data Processing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unstructured Data Processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="document_ai.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sound_transcripts.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analyst Investor Calls
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="search_service.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Search Service
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Structured Data Processing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Structured Data Processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="market_place.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Get Data from the MarketPlace
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="analyst.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analyse your data with Cortex Analyst
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Application
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="snowflake_intelligence.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configure and use Snowflake Intelligence
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="agents.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Cortex Agents using the Agents API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of Contents</h1>
+                </nav>
+            </div>
+        </section>
+        
+                    <section class='print-page md-section' id='section-1' heading-number='1'>
+                        <h1>Welcome<a class='headerlink' href='#section-1' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="index" heading-number="1.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="build-an-ai-assistant-for-fsi-using-cortex-and-document-ai"><h1black>Build an AI Assistant for FSI using </h1black><h1blue>Cortex and Document AI</h1blue></h1>
+<p><h1sub>Hands On Lab</h1sub></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/general/image-1.png" data-desc-position="bottom"><img src="assets/general/image-1.png" alt="Lab introduction" width="900"></a></p>
+<p><h1sub>Introduction</h1sub></p>
+<p>Effective stock selection relies on having up-to-date data from diverse sources—research analyst reports, 10-K filings, investor call recordings, historical tick data, and real-time market feeds. To manage this efficiently, a unified platform is essential—one capable of storing and processing all data types, whether PDFs of analyst reports, MP3 investor recordings, or SEC documents.
+This data must be readily accessible for analysis using the latest large language models (LLMs) such as Anthropic, Gemma, LLaMA, or DeepSeek. Ensuring the trustworthiness and security of generated summaries and insights is critical, especially when they inform high-stakes financial decisions.
+In addition, developing Agentic AI capabilities allows for natural language question-answering tailored to investors and traders who need precise, real-time insights before executing trades.
+In this hands-on lab, you’ll learn how to build a Stock Selection Agent from the ground up using the Snowflake AI Data Cloud.</p>
+<p>Learn how you can leverage the latest AI technologies right within the Snowflake platform. When AI is deeply embedded in your trusted data platform, the possibilities are endless. We will be exploring the processing of both <strong>Unstructured</strong> and <strong>Structured</strong> data which will then allow the application of a <strong>Cortex Agent</strong> to help discover insights by leveraging <strong>All Data.</strong></p>
+<p><h1sub>Data Sources and Analyst Coverage</h1sub></p>
+<p>This hands-on lab utilizes a comprehensive dataset spanning multiple data types and financial analysts to demonstrate real-world AI applications in financial services. You'll work with:</p>
+<h3 id="index-analyst-research-reports"><strong>Analyst Research Reports</strong></h3>
+<p>The lab features comprehensive analysis from specialized research firms created specifically for this hands-on experience:
+- <strong>Apex Analytics</strong> - Growth-focused equity research
+- <strong>Consensus Point</strong> - Institutional-grade analysis and recommendations
+- <strong>Momentum Metrics</strong> - Quantitative trading insights and momentum analysis
+- <strong>Pinnacle Growth Investors</strong> - Growth equity research and sector analysis
+- <strong>Quant-Vestor</strong> - Quantitative investment research and algorithmic trading insights
+- <strong>Sterling Partners</strong> - Value-oriented investment analysis
+- <strong>Veridian Capital</strong> - Comprehensive equity research and market analysis</p>
+<h3 id="index-multi-modal-data-integration"><strong>Multi-Modal Data Integration</strong></h3>
+<p>Throughout the lab, you'll process and analyze:</p>
+<ul>
+<li><strong>Research Reports</strong> - Extract structured insights (ratings, price targets, growth forecasts) using Document AI</li>
+<li><strong>Earnings Call Transcripts</strong> - Process audio recordings into searchable text with sentiment analysis</li>
+<li><strong>Financial Infographics</strong> - Extract key metrics from quarterly earnings visuals and charts</li>
+<li><strong>Real-time Market Data</strong> - Live stock price feeds and trading data from Snowflake Marketplace</li>
+<li><strong>Historical Performance Data</strong> - Multi-quarter trends and comparative analysis</li>
+</ul>
+<h3 id="index-ai-powered-analysis-journey"><strong>AI-Powered Analysis Journey</strong></h3>
+<p>Your AI assistant will synthesize insights from all these sources to answer questions like:
+- <em>"What do Apex Analytics and Consensus Point analysts say about Snowflake's growth prospects?"</em>
+- <em>"How does Momentum Metrics' quantitative analysis compare to Sterling Partners' value assessment?"</em>
+- <em>"What are Veridian Capital's latest price targets and how do they align with earnings call sentiment?"</em>
+- <em>"Based on all available data, should I buy, sell, or hold Snowflake shares?"</em></p>
+<p>This diverse dataset enables you to experience how modern AI can unify structured financial data with unstructured analyst opinions, creating comprehensive investment intelligence.</p>
+<p><h1sub> The lab environment</h1sub></p>
+<p>A complete lab environment has been built for you automatically. This includes:</p>
+<ul>
+<li><strong>Snowflake Account</strong>: <a href="https://sfsehol-dry_run_build_ai_assistant_oct_vuifug.snowflakecomputing.com">sfsehol-dry_run_build_ai_assistant_oct_vuifug</a></li>
+<li><strong>User</strong>: USER</li>
+<li><strong>Snowflake Virtual Warehouse</strong>: DEFAULT_WH</li>
+<li><strong>Snowflake Database</strong>: DATAOPS_EVENT_PROD</li>
+<li><strong>Schema</strong>: DEFAULT_SCHEMA</li>
+</ul>
+<p><h1sub>Structure of the Session</h1sub></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/general/architecture.png" data-desc-position="bottom"><img src="assets/general/architecture.png" alt="System architecture" width="900"></a></p>
+<p>You will be taken through the AI capabilities of Snowflake with Financial Reporting data. You will be focusing on the Snowflake share price - and will be investigating whether you should <strong>BUY</strong>, <strong>SELL</strong> or <strong>HOLD</strong></p>
+<p>Please note that the Analyst reports for this lab are completely fictitious and financial decisions cannot be made based on any of the outcomes of this lab.</p>
+<p><h1sub>Order of the Lab</h1sub></p>
+<ul>
+<li>
+<p>Unstructured Data Processing</p>
+</li>
+<li>
+<p>Structured Data Processing</p>
+</li>
+<li>
+<p>Snowflake Intelligence - Create an AI agent using simple configuration</p>
+</li>
+<li>
+<p>Develop a Streamlit Agent with the Snowflake Agent API - an application to query both Unstructured and Structured Data</p>
+</li>
+<li>
+<p>Navigate through the lab via the side-bar menu</p>
+</li>
+</ul>
+<p><h1sub>HAVE FUN</h1sub></p>
+<ul>
+<li>Navigate to <a href="#logging_in">the lab steps</a> to begin the lab.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">This lab environment will disappear!</p>
+<p>This event is due to end at 2025-11-02 22:00:00+00:00, at which point access will be restricted, and accounts will be removed.</p>
+</div></body></html></section></section>
+                    <section class='print-page md-section' id='section-2' heading-number='2'>
+                        <h1>Lab Steps<a class='headerlink' href='#section-2' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="logging_in" heading-number="2.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="logging-in-and-cortex-playground"><h1black>Logging in and </h1black><h1blue>Cortex Playground</h1blue></h1>
+<p>Within the previous screen, you should have logged into snowflake which would have opened up in a new tab and should look like this:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/step1/home_page.png" data-desc-position="bottom"><img src="assets/step1/home_page.png" alt="Snowflake homepage" width="900"></a></p>
+<p>If you cannot find the snowflake URL, you can go back to the registration page and view your unique Snowflake link by clicking here: <a href="https://go.dataops.live/dry-run-build-ai-assistant-oct" target="_blank">Personalized Event Homepage</a></p>
+<p>Upon logging in, you may be prompted to add your email address.  It is important to input your email address for accessing market place data.  You will be accessing marketplace data in this lab.</p>
+<p>Once you have logged in, populated your email address and closed down any welcome messages, navigate to the <strong>AI &amp; ML</strong> section of the navigation bar.</p>
+<h3 id="logging_in-snowflake-ai-and-ml-studio"><h1sub>Snowflake <strong>AI and ML</strong> studio</h1sub></h3>
+<p>Snowflake AI and ML studio is a one stop shop  to try out a number of AI functions using a user friendly UI.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/step1/or001.png" data-desc-position="bottom"><img src="assets/step1/or001.png" alt="AI and ML studio" width="900"></a>.  </p>
+<p>For today's lab, you will be exploring the AI features within Snowflake.  The following features we will be cover as part of the lab:</p>
+<ul>
+<li>
+<p><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-playground">Cortex Playground</a></p>
+<p>The Cortex LLM Playground lets you compare text completions across the multiple large language models available in Cortex AI.</p>
+</li>
+<li>
+<p><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-finetuning">Cortex Fine Tuning</a></p>
+<p>The Snowflake Cortex Fine-tuning function offers a way to customize large language models for your specific task.</p>
+</li>
+<li>
+<p><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-search/cortex-search-overview">Cortex Search</a></p>
+<p>Cortex Search enables low-latency, high-quality “fuzzy” search over your Snowflake data.  Cortex Search powers a broad array of search experiences for Snowflake users including Retrieval Augmented Generation (RAG) applications leveraging Large Language Models (LLMs).</p>
+</li>
+<li>
+<p><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst">Cortex Analyst</a></p>
+<p>Cortex Analyst is a fully-managed, LLM-powered Snowflake Cortex feature that helps you create applications capable of reliably answering business questions based on your structured data in Snowflake.</p>
+</li>
+</ul>
+<h3 id="logging_in-cortex-playground"><h1sub>Cortex Playground</h1sub></h3>
+<p>Today, we will be covering <strong>Cortex Complete</strong> using prompt engineering.  This will be covered in various notebooks as part of data processing.  </p>
+<p>You can try out prompt ideas using the <strong>Cortex Playground</strong>. </p>
+<p>Click on <strong>Cortex Playground</strong> and try asking some questions using a model of choice.</p>
+<p>Take a look at the following example:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/step1/or002.png" data-desc-position="bottom"><img src="assets/step1/or002.png" alt="Cortex Playground example" width="900"></a></p>
+<p>The answer to the question is making some suggestions of the things I might want to look at before I make this sort of financial decision.  All this information is available in various datasets.</p>
+<h3 id="logging_in-document-ai"><h1sub>Document AI</h1sub></h3>
+<p>Although Document AI is not an option within the studio page, you will see a link to it within the AI &amp; ML category in the navigation bar.   This is where you will extract features from a variety of unstructured documents and will be the next section of the lab.  Please Proceed to <strong>Unstructured Data Processing</strong> from the navigation bar.</p></body></html></section>
+                    <section class='print-page md-section' id='section-2-2' heading-number='2.2'>
+                        <h1>Unstructured Data Processing<a class='headerlink' href='#section-2-2' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="document_ai" heading-number="2.2.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="document-ai"><h1black>Document </h1black><h1blue>AI</h1blue></h1>
+<h2 id="document_ai-build-and-run-1-document-ai-model"><h1sub>Build and Run 1 Document AI model</h1sub></h2>
+<p>In this section you will learn how to build and train a Document AI Model which will enable you to extract important structured content out of unstructured documents.</p>
+<ul>
+<li>
+<p>Within the AI &amp; ML area, click on <strong>Document AI</strong>:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/D001.png" data-desc-position="bottom"><img src="assets/docai/D001.png" alt="Document AI interface" width="300"></a></p>
+</li>
+<li>
+<p>Click on the + Build icon to build a new model</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/D002.png" data-desc-position="bottom"><img src="assets/docai/D002.png" alt="Build new model" width="300"></a></p>
+</li>
+<li>
+<p>Under Build name, type in <strong>ANALYST_REPORTS</strong></p>
+</li>
+<li>
+<p>Choose the <strong>ACCELERATE_AI_IN_FSI</strong> for the database and <strong>DOCUMENT_AI</strong> for the Schema</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/D003.png" data-desc-position="bottom"><img src="assets/docai/D003.png" alt="Model configuration" width="600"></a></p>
+<p>Press <strong>Create</strong></p>
+<h3 id="document_ai-downloading-documents"><h1sub>Downloading Documents</h1sub></h3>
+<p>We now need to upload some documents into Document AI in order to build a trained model. The first Model we will build are analyst reports. The reports we will be using are completely fictional.</p>
+<ul>
+<li><strong>Download</strong> The Analyst Reports <strong><a href="downloads/research_analyst_reports.zip" download>here</a></strong></li>
+</ul>
+<h3 id="document_ai-uploading-the-documents-to-the-model"></h3><h1>Uploading the Documents to the model</h1>
+<ul>
+<li>Unzip the Analyst reports to a file location which you can access</li>
+<li>Open the model which you have just created and press upload documents</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/D004.png" data-desc-position="bottom"><img src="assets/docai/D004.png" alt="Upload documents" width="600"></a></p>
+<p>You will see that you can upload a variety of formats.  Today we will be uploading PDF documents.  You can either select the files by searching in your file system <strong>or</strong> drag and drop.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/D005.png" data-desc-position="bottom"><img src="assets/docai/D005.png" alt="Document upload interface" width="600"></a></p>
+<p>Press <strong>Upload</strong></p>
+<p>You will see that 6 documents are now uploaded but need attention.  To use the model, you will first need to decide which fields you would like to extract.  A warning will also let you know that for better accuracy you should really train the model with more documents.  For this exercise we will just use 6 but in reality you will need to train the model with at least 10 documents for good accuracy.</p>
+<h3 id="document_ai-review-documents-and-extract-fields"><h1sub>Review Documents and Extract Fields</h1sub></h3>
+<ul>
+<li>With in the Documents in Dataset section, press <strong>See all documents</strong></li>
+</ul>
+<p>You will see that all 6 documents are in need of review</p>
+<ul>
+<li>Click on the first document in the list.  This will take you straight to the Analyst Report.  The right hand side of the screen you will need to add the fields that you wish to extract.  We will be extracting specific fields.</li>
+</ul>
+<p>To start with, you will be presented with how you would like Document AI to extract the information. Do you want to extract key singular facts (entities) or would you like to extract table information? You choose either table or entity mode at this point. For this exercise you will extract entities. But feel free to experiment and choose table extraction.  </p>
+<ul>
+<li>
+<p>Press <strong>+ Entity</strong> to add a new field</p>
+</li>
+<li>
+<p>Enter <strong>DATE_REPORT</strong> in the first field and in the second field, as the question <strong>When was the Report Created?</strong></p>
+</li>
+</ul>
+<p>Document AI will search through the multi page document and then will give you an answer with a probability score</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/D006.png" data-desc-position="bottom"><img src="assets/docai/D006.png" alt="Field extraction example" width="600"></a></p>
+<ul>
+<li>
+<p>If you are happy with the answer, mark it with the <strong>tick</strong>. When you press the tick, the probability score will change to 1.00 - In other words, you have told Document AI that you are 100% sure that this answer is correct.</p>
+</li>
+<li>
+<p>Create 5 additional fields with the corresponding questions - If Document AI gets the answer right, mark with a tick. Press <strong>+ Entity</strong> to create each field.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NAME_OF_REPORT_PROVIDER</td>
+<td>name of the report provider</td>
+</tr>
+<tr>
+<td>RATING</td>
+<td>What is the rating? is it BUY, SELL, HOLD OR EQUAL-WEIGHT?</td>
+</tr>
+<tr>
+<td>CLOSE_PRICE</td>
+<td>Close Price Value</td>
+</tr>
+<tr>
+<td>PRICE_TARGET</td>
+<td>Price Target Value</td>
+</tr>
+<tr>
+<td>GROWTH</td>
+<td>What is the latest revenue Growth - YoY</td>
+</tr>
+</tbody>
+</table>
+<p>If the answer is wrong, overtype the answer with the correct answer.  This will automatically mark it as correct with the new answer.</p>
+<p>Sometimes document AI comes up with no answer at all.  If this is correct, still mark with a tick.</p>
+<p>When you have finished entering the questions and getting the answers you should see something that looks like this:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/D007.png" data-desc-position="bottom"><img src="assets/docai/D007.png" alt="Document review fields" width="600"></a></p>
+<p>Now it's time to evaluate the same questions and answers with another document.</p>
+<ul>
+<li>Click on the arrow to review on the bottom right of this pane the next document.  Currently you are reviewing 1 of 6 documents.</li>
+</ul>
+<p>The next document may populate more of the answers.  You will need to simply mark them as to whether they are correct or not.  If any are incorrect, type over with the correct answer.</p>
+<ul>
+<li>When you have finished reviewing 2 of 6 documents, continue to review the final 5 documents. </li>
+</ul>
+<p>Once you have completed your document review press the back button on the top left to go back to the previous screen</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/D008.png" data-desc-position="bottom"><img src="assets/docai/D008.png" alt="Accepted documents" width="600"></a></p>
+<p>All 6 documents should now be marked as <strong>Accepted</strong>. </p>
+<ul>
+<li>Go back to Build Details</li>
+</ul>
+<p>You will see that there is a model accuracy.  This accuracy figure will be due to how many answers document ai initially predicted correctly or not.  If the accuracy score is low, you may wish to train the model by clicking on <strong>Train model</strong> button. This will retrain the model using the corrected answers.</p>
+<ul>
+<li>Press <strong>Publish Version</strong>  which will publish your first version of the model.  Today, we will not <strong>train model</strong> as this can take some time - especially if you are training large documents of multiple pages.  In addition, the model is calculating a high model accuracy score of 0.95.  Being concise with your questions can help the accuracy with little need for training.</li>
+</ul>
+<p>Once complete, you will see a model version number and example queries on how to utilise the model in <strong>SQL</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/D009.png" data-desc-position="bottom"><img src="assets/docai/D009.png" alt="Model accuracy and queries" width="900"></a></p>
+<p>You will have examples of these queries preloaded into a notebook. This model is iterative, if you find the results are not what you expect in terms of accuracy, simply add more documents and retrain.  The more documents you train, the better results you will get.  Every time you re-train or republish a new version, you will get a new version number.  You will need this version number in the query.  The screenshot above, shows that you are using the <strong>model version 1</strong>.</p>
+<ul>
+<li>Press the <strong>back button</strong> to return to the Document AI home screen.</li>
+</ul>
+<h3 id="document_ai-extracting-data-into-a-table"><h1sub>Extracting data into a table</h1sub></h3>
+<p>If you choose the table mode you can extract data into a table format.  This could look something simular to this infograhic example:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/image-5.png" data-desc-position="bottom"><img src="assets/docai/image-5.png" alt="Infographic table extraction" width="900"></a></p>
+<p>The edit mode allows you to choose what columns to add in the table and multiple tables can be extracted</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/image-6.png" data-desc-position="bottom"><img src="assets/docai/image-6.png" alt="Table edit mode" width="900"></a></p>
+<ul>
+<li>If you wish to tryout the table mode, <strong>Download</strong> the Infographics <strong><a href="downloads/infographics.zip" download> here</a></strong></li>
+</ul>
+<h3 id="document_ai-process-documents-at-scale"><h1sub>Process Documents at Scale</h1sub></h3>
+<p>Let's now process some documents.  We have more documents both for Analyst Reports and infographics in a stage.  We can use our new models to extract structured information out of them.  In addition, we will extract all the text out of the Analyst reports for search purposes.</p>
+<p>For the next Document AI steps, you will use <strong>Snowflake Notebooks</strong> to process the documents as well as <strong>visualise</strong> the outputs.</p>
+<h4 id="document_ai-model-1-analyst-reports"><h1sub>Model 1 - Analyst Reports</h1sub></h4>
+<ul>
+<li>Go back to the home page and click on <strong>Projects &gt; Notebooks</strong></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/docai/projects_notebooks2.png" data-desc-position="bottom"><img src="assets/docai/projects_notebooks2.png" alt="Projects notebooks" width="600"></a>
+- Click on the <strong>Document AI Analyst Reports</strong> notebook</p>
+<ul>
+<li>Run through the notebook to process the <strong>Analyst Reports</strong>.</li>
+</ul>
+<p>This notebook will perform the following:</p>
+<ul>
+<li>
+<p>Extract the values defined in the <strong>ANALYST_REPORTS</strong> model you have created from a directory of files residing in a <strong>Snowflake Stage</strong></p>
+</li>
+<li>
+<p>Create a structured table of information</p>
+</li>
+<li>
+<p>Extract all remaining text using <strong>Cortex Parse Document</strong></p>
+</li>
+</ul>
+<h4 id="document_ai-infographics-data"><h1sub>Infographics data</h1sub></h4>
+<p>You will run a second notebook which will extract the structured text out of the <strong>Infographic</strong> image files stored in a <strong>Snowflake Stage</strong>.</p>
+<ul>
+<li>Go back to the Notebooks and open the <strong>INFOGRAPHICS</strong> notebook</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/general/go_to_notebooks.png" data-desc-position="bottom"><img src="assets/general/go_to_notebooks.png" alt="Go to notebooks" width="600"></a></p>
+<ul>
+<li>Run through the notebook to process the <strong>Infographics</strong> which will extract all values and store the results in a new structured table.</li>
+</ul></body></html></section><section class="print-page" id="sound_transcripts" heading-number="2.2.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="analyst-investor-calls"><h1black>Analyst </h1black><h1blue>Investor Calls</h1blue></h1>
+<p>Snowflake Inc., like all publicly listed companies, conducts public announcements of its quarterly financial results. In this project, we will process the Q3 earnings call recording featuring Snowflake’s CEO and CFO. The workflow involves converting the MP3 audio file into text using transcription technology. Once transcribed, the text will be summarized to extract key insights. Finally, this summary will be stored in a dedicated <strong>Summary</strong> table for further analysis. We will add this unstructured data summary into our Cortex Agent at the end of the lab. This will show you the power of converted calls into text and then into Summary using cortex and then front ending them using Streamlit so you have an Agentic AI.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/sound/so01.png" data-desc-position="bottom"><img src="assets/sound/so01.png" alt="Sound transcripts" width="900"></a></p>
+<p><strong>Let's Begin analysing sound transcript data</strong>
+- Go back to the home page and click on <strong>Projects &gt; Notebooks</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/general/go_to_notebooks.png" data-desc-position="bottom"><img src="assets/general/go_to_notebooks.png" alt="Go to notebooks" width="400"></a></p>
+<ul>
+<li>Click on the <strong>ANALYSE_SOUND</strong> notebook</li>
+<li>Run through the notebook to analyse the sound transcripts which also includes sentiment analysis and an introduction to how <strong>Vector Embeddings</strong> enhances search capabilities.</li>
+</ul></body></html></section><section class="print-page" id="search_service" heading-number="2.2.3"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="create-a-search-service"><h1black>Create a </h1black><h1blue>Search Service</h1blue></h1>
+<h2 id="search_service-introduction"><h1sub>Introduction</h1sub></h2>
+<p>In this section, you will create a powerful search service that makes your unstructured financial data instantly accessible and queryable. This is a critical step in building intelligent AI applications that can quickly find and retrieve relevant information from large document collections.</p>
+<h3 id="search_service-what-youll-accomplish"><strong>What You'll Accomplish</strong></h3>
+<p>By the end of this section, you will have:</p>
+<ul>
+<li><strong>Built a Hybrid Search Engine</strong>: Created a search service that combines both vector (semantic) and keyword search capabilities</li>
+<li><strong>Enabled Instant Document Retrieval</strong>: Made your analyst reports, earnings call transcripts, and infographics searchable in seconds</li>
+<li><strong>Implemented RAG Foundations</strong>: Established the core infrastructure for Retrieval Augmented Generation (RAG) that powers intelligent AI responses</li>
+<li><strong>Prepared for Agent Integration</strong>: Created the search capabilities that your final AI agent will use to find relevant context</li>
+</ul>
+<h3 id="search_service-the-challenge-finding-information-in-unstructured-data"><strong>The Challenge: Finding Information in Unstructured Data</strong></h3>
+<p>You've successfully processed and extracted valuable insights from multiple types of financial documents:
+- <strong>Analyst Reports</strong>: Structured data extraction plus full text content
+- <strong>Earnings Call Transcripts</strong>: Audio-to-text conversion with sentiment analysis
+- <strong>Financial Infographics</strong>: Key metrics extraction from visual content</p>
+<p>But now you face a common challenge: <strong>How do you quickly find specific information within this growing collection of unstructured data?</strong></p>
+<h3 id="search_service-the-solution-intelligent-search-services"><strong>The Solution: Intelligent Search Services</strong></h3>
+<p>Traditional keyword search falls short when dealing with financial content because:
+- Important concepts may be expressed in different ways ("revenue growth" vs "top-line expansion")
+- Users need to find documents by meaning, not just exact word matches
+- Context and semantic understanding are crucial for financial analysis</p>
+<p><strong>Cortex Search</strong> solves this by providing:
+- <strong>Semantic Search</strong>: Understands meaning and context, not just keywords
+- <strong>Hybrid Approach</strong>: Combines the precision of keyword search with the intelligence of vector search
+- <strong>Zero Infrastructure</strong>: No need to manage embeddings, indexes, or search infrastructure
+- <strong>Real-time Updates</strong>: Automatically refreshes as your data changes</p>
+<h3 id="search_service-building-blocks-for-ai-intelligence"><strong>Building Blocks for AI Intelligence</strong></h3>
+<p>The search service you create here will become a fundamental component of your final AI agent, enabling it to:
+- <strong>Find Relevant Context</strong>: Quickly locate information needed to answer user questions
+- <strong>Provide Citations</strong>: Reference specific documents and passages that support its responses
+- <strong>Cross-reference Information</strong>: Connect insights from multiple documents and data sources
+- <strong>Support Complex Queries</strong>: Handle sophisticated financial analysis requests</p>
+<p>Let's begin building your intelligent search capability.</p>
+<h2 id="search_service-understanding-your-data-assets"><h1sub>Understanding Your Data Assets</h1sub></h2>
+<p>We now have quite a bit of unstructured data from the analyst reports, the earnings calls, and the infographics - now how do we find it all efficiently? </p>
+<p>This is where you will build a search service.</p>
+<p>You have experienced the key principle of RAG based searching while you were searching for relevant pieces of information in the <strong>earnings call transcripts</strong> section.</p>
+<p>A search service uses this principle but simplifies the setup.</p>
+<p><strong>Cortex Search</strong> gets you up and running with a hybrid (vector and keyword) search engine on your text data in minutes, without having to worry about embedding, infrastructure maintenance, search quality parameter tuning, or ongoing index refreshes. This means you can spend less time on infrastructure and search quality tuning, and more time developing high-quality chat and search experiences using your data. </p>
+<h2 id="search_service-implementing-your-search-service"><h1sub>Implementing Your Search Service</h1sub></h2>
+<p>Now let's put this into practice by creating your search service using the data you've processed in previous sections.</p>
+<ul>
+<li>Go back to the home page and click on <strong>Projects &gt; Notebooks</strong></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/general/go_to_notebooks.png" data-desc-position="bottom"><img src="assets/general/go_to_notebooks.png" alt="Go to notebooks" width="400"></a></p>
+<ul>
+<li>Open the <strong>CREATE_SEARCH_SERVICE</strong> notebook</li>
+</ul>
+<h2 id="search_service-next-steps-connecting-to-structured-data"><h1sub>Next Steps: Connecting to Structured Data</h1sub></h2>
+<p>Excellent! You have now created a powerful search service for your unstructured financial documents. Your search service can now:
+- Find relevant analyst reports based on semantic meaning
+- Retrieve earnings call segments related to specific topics
+- Search through infographic content and extracted insights</p>
+<p>However, comprehensive financial analysis requires both unstructured insights and structured data analysis. While you've used Cortex Search to find information within unstructured documents, there are also many structured datasets that you'll want to include in your analysis. Some structured tables you have already created using Document AI, but there will be additional structured datasets from external sources.</p>
+<ul>
+<li>
+<p>Proceed to <strong>Structured Data Processing</strong> where you will start by transforming stock prices and trading datasets from the <strong>marketplace</strong>.</p>
+<p>Click <a href="#analyst">Here</a> to continue</p>
+</li>
+</ul></body></html></section></section>
+                    <section class='print-page md-section' id='section-2-3' heading-number='2.3'>
+                        <h1>Structured Data Processing<a class='headerlink' href='#section-2-3' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="market_place" heading-number="2.3.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="get-data-from-the-marketplace"><h1black>Get Data from the </h1black><h1blue>MarketPlace</h1blue></h1>
+<p>First, it would be good to get some data from the marketplace to understand the latest stock prices of <strong>Snowflake shares</strong>.</p>
+<ul>
+<li>In the Home page, go to <strong>Data Products</strong> and then <strong>Marketplace</strong>.</li>
+<li>In the Search Menu, type in <strong>share prices snowflake</strong>.</li>
+<li>Click on the <strong>Finance &amp; Economics</strong> dataset.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/marketplace/M001.png" data-desc-position="bottom"><img src="assets/marketplace/M001.png" alt="Marketplace Finance &amp; Economics dataset" width="600"></a></p>
+<p>This dataset is structured in nature but updates on a daily basis.</p>
+<ul>
+<li>
+<p>Press <strong>Get</strong> to get the data. You will be prompted to type in your email address if you have not already completed your profile.</p>
+</li>
+<li>
+<p>Press <strong>Done</strong></p>
+</li>
+</ul>
+<p>We now have some structured data available to use for analysis</p>
+<ul>
+<li>Navigate to <strong>Analyse your Data with Cortex Analyst</strong></li>
+</ul></body></html></section><section class="print-page" id="analyst" heading-number="2.3.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="analyse-your-data-with-cortex-analyst"><h1black>Analyse your data with</h1black> <h1blue>Cortex Analyst</h1blue></h1>
+<p>In this section you will learn how to build a dynamic data explorer using Cortex Analyst. Traditionally, users would digest structured information through reports. Over time, reports turned into dashboards and self service capabilities became more and more in demand. However, in order to self serve, users would normally require extensive report building and data engineering expertise. </p>
+<p>Cortex Analyst's AI allows views to be generated by simply asking questions about the data</p>
+<h3 id="analyst-examine-the-structured-marketplace-data"><h1sub>Examine the Structured Marketplace Data</h1sub></h3>
+<p>First of all, navigate to the Cortex Analyst notebook by navigating to the <strong>projects &gt; Notebooks</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/general/go_to_notebooks.png" data-desc-position="bottom"><img src="assets/general/go_to_notebooks.png" alt="Go to notebooks" width="400"></a></p>
+<ul>
+<li>Open the notebook and press Start in the top right hand corner to start the compute. </li>
+</ul>
+<p>Within the self contained notebook, you will perform the following:</p>
+<ul>
+<li>Create a new dataset from the market place</li>
+<li>Visualise the data in Streamlit</li>
+</ul>
+<p>Once you have completed the notebook, return here</p>
+<hr>
+
+<h3 id="analyst-use-cortex-analyst-to-explore-the-data"><h1sub>Use Cortex Analyst to Explore the data</h1sub></h3>
+<p>It is easy to create an app in order to gain insights from structured data.  <strong>Cortex Analyst</strong> allows the user to ask questions in natural language and will return the result in an appropiate format.  Let's Begin:</p>
+<ul>
+<li>From the navigation bar on the right, hover over the <strong>AI &amp; ML</strong> icon and click on <strong>Studio</strong></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/C002.png" data-desc-position="bottom"><img src="assets/analyst/C002.png" alt="AI &amp; ML Studio" width="300"></a></p>
+<ul>
+<li>
+<p>When prompted, end the notebook session to proceed.</p>
+</li>
+<li>
+<p>Press <strong>Try</strong> on <strong>Cortex Analyst</strong>.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/C001.png" data-desc-position="bottom"><img src="assets/analyst/C001.png" alt="Cortex Analyst Try button" width="600"></a></p>
+<hr>
+
+<ul>
+<li>
+<p>Within the tabs at the top of the screen, switch to <strong>Semantic models</strong></p>
+</li>
+<li>
+<p>Under database, select <strong>ACCELERATE_AI_IN_FSI</strong> then <strong>CORTEX_ANALYST</strong> for schema</p>
+</li>
+<li>
+<p>select <strong>CORTEX_ANALYST</strong> for the stage.</p>
+</li>
+<li>
+<p>you will see a model called <strong>semantic_model.yaml</strong>  has already been created.  Here you can open the model to view how it's constructed.  This model will be used for the agent later on. </p>
+</li>
+<li>
+<p>Click on the <strong>semantic_model.yaml</strong> to open the model.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/image-2.png" data-desc-position="bottom"><img src="assets/analyst/image-2.png" alt="Semantic model view" width="900"></a></p>
+<p>You will note that as per the screenshot above, the model navigation menu is open.  The Semantic model includes 5 logical tables.  These tables have all been created earlier in the lab.</p>
+<p>The right hand screen allows you to test questions.</p>
+<ul>
+<li>try out some questions in here.</li>
+</ul>
+<p>The Semantic model is stored as a yaml file within a stage.  You can save the contents of this model as a semantic view.</p>
+<ul>
+<li>exit back to the cortex analyst home screen and click on the 3 dots next to the yaml file to <strong>Convert to Semantic View</strong></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/image-3.png" data-desc-position="bottom"><img src="assets/analyst/image-3.png" alt="Convert to Semantic View" width="900"></a></p>
+<ul>
+<li>Convert using the following database and schema</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/image-4.png" data-desc-position="bottom"><img src="assets/analyst/image-4.png" alt="Semantic view configuration" width="600"></a></p>
+<ul>
+<li>Press <strong>Convert and save</strong></li>
+</ul>
+<h2 id="analyst-optional-exercise"><h1sub><strong>Optional Exercise</strong></h1sub></h2>
+<p>So far, you have browsed an existing Semantic model which is stored as a YAML file. In here, you would be able to edit as you see fit. In addition, you have imported the semantic model as a semantic view which stores the model within the database.</p>
+<p>It is also easy to create a brand new model from scratch.  If you have time, please have a go at creating a new model.</p>
+<ul>
+<li>
+<p>Press <strong>Create New</strong> to create a new Semantic model about the previously loaded dataset.</p>
+</li>
+<li>
+<p>Call the model <strong>stock_data</strong>.</p>
+</li>
+</ul>
+<p>Below you will see the <strong>Semantic Model</strong> wizard.  This will create a YAML file which makes sense of the data ane provides a link between the sorts of questions that might be asked and the dataset itself.  </p>
+<ul>
+<li>Populate the fields as the screenshot below:</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/C004.png" data-desc-position="bottom"><img src="assets/analyst/C004.png" alt="New semantic model creation" width="900"></a></p>
+<ul>
+<li>
+<p>Press <strong>Next</strong></p>
+</li>
+<li>
+<p>Under the <strong>ACCELERATE_AI_IN_FSI.DEFAULT_SCHEMA</strong> view, select the <strong>STOCK_PRICES</strong> table.</p>
+</li>
+<li>Press <strong>Next: Select tables</strong></li>
+<li>
+<p>Select all fields</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/C012.png" data-desc-position="bottom"><img src="assets/analyst/C012.png" alt="Select fields" width="900"></a></p>
+</li>
+<li>
+<p>Press <strong>Done</strong></p>
+</li>
+</ul>
+<p>Next, you will need to specify what fields are Dimensions, Time Dimensions, Facts, Named Fields or Metrics.  Cortex suggests where they should be placed - at this point, you have the ability to override where needed.</p>
+<p>Under Named filters you can educate <strong>Cortex</strong> Analyst valid examples of how the data is filtered which improves the accuracy of the answers.  We will add one now</p>
+<ul>
+<li>Under <strong>Named Filters</strong> click on the +</li>
+<li>Under Expression, type in the following:</li>
+</ul>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#analyst-__codelineno-0-1"></a><span class="n">TICKER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'SNOW'</span>
+</code></pre></div>
+- Under Filter name call the filter <strong>SNOW</strong>.
+- Press <strong>Generate Fields</strong> to allow AI to ender a field description with synonyms.  You will see that Cortex assumes we are talking about 'Actual Snow' as apposed to a Data and AI platform. 
+-   Modify the Synonyms to more relevant ones.  When finished, press <strong>Save</strong><p></p>
+<p>The next step you can provide sample questions of what might be asked about the dataset.  Tryout the following in the text box:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#analyst-__codelineno-1-1"></a>What is the latest stock price for SNOW share?
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#analyst-__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#analyst-__codelineno-1-3"></a>Tell me the stock prices for SNOW Shares last week by day of the week?
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#analyst-__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#analyst-__codelineno-1-5"></a>What is the stock prices for SNOW shares by month?
+</code></pre></div>
+<p>As you try this out, you will see example outputs</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/C003.png" data-desc-position="bottom"><img src="assets/analyst/C003.png" alt="Sample questions output" width="900"></a></p>
+<h3 id="analyst-add-more-datasets-in-the-model"><h1sub>Add More Datasets in the model</h1sub></h3>
+<p>We have now created a <strong>Semantic Model</strong> for the structured dataset found on the marketplace. If you remember, we parsed two additional datasets from Document AI and created two additional structured tables. We will add these additional tables into the semantic model.</p>
+<ul>
+<li>Within the <strong>Snowflake AI and ML Studio</strong>, click on <strong>Cortex Analyst</strong></li>
+<li>Choose <strong>ACCELERATE_AI_IN_FSI.CORTEX_ANALYST</strong> for the Database and Schema</li>
+<li>Choose <strong>Cortex Analyst</strong> for the STAGE.</li>
+<li>
+<p>Select the previously built yaml file.</p>
+</li>
+<li>
+<p>Press <strong>Open</strong></p>
+</li>
+</ul>
+<p>Now we are in the edit screen.  You will see the existing setup - but now, we will add an additional table.</p>
+<ul>
+<li>
+<p>Click on the <strong>+</strong> next to <strong>Logical tables</strong>.</p>
+</li>
+<li>
+<p>Under ACCELERATE_AI_IN_FSI.DOCUMENT_AI, select <strong>EARNINGS_INFOGRAPHIC_PARSED</strong>.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/C005.png" data-desc-position="bottom"><img src="assets/analyst/C005.png" alt="Add logical table" width="900"></a></p>
+<ul>
+<li>
+<p>Press <strong>Next</strong></p>
+</li>
+<li>
+<p>Select all fields.</p>
+</li>
+<li>
+<p>Press <strong>Done</strong></p>
+</li>
+</ul>
+<p>You can now browse through the <strong>Dimensions</strong>, <strong>Time Dimensions</strong> and <strong>Facts</strong> to see if everything is as expected.  You have the opportunity to make amendments and add <strong>Synonyms</strong> to each field</p>
+<p>You can now test <strong>Cortex Analyst out from here</strong>.  For instance:</p>
+<ul>
+<li>
+<p>In the prompt ask <strong>What is the product Revenue in 2023</strong></p>
+<p>Cortex will Present you with an answer as well as a sample query.  If you think this is correct, you can add it as a <strong>verified Query</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/C006.png" data-desc-position="bottom"><img src="assets/analyst/C006.png" alt="Verified query result" width="900"></a></p>
+</li>
+</ul>
+<p>When you have finished editing the <strong>Semantic Model</strong> press <strong>Save</strong> which is at the top right hand corner of the screen.</p>
+<ul>
+<li>
+<p>Add another <strong>Logical Table</strong> the same way as before.  This time, within <strong>ACCELERATE_AI_IN_FSI.DOCUMENT_AI</strong>, select <strong>REPORTS_STRUCTURED</strong>.</p>
+</li>
+<li>
+<p>Choose All columns and then click <strong>Done</strong></p>
+</li>
+<li>
+<p>What analyst gave a rating of <strong>Buy</strong>?</p>
+</li>
+<li>
+<p>Who gave a rating of <strong>Sell</strong>?</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/C007.png" data-desc-position="bottom"><img src="assets/analyst/C007.png" alt="Analyst ratings query" width="600"></a></p>
+</li>
+<li>
+<p>When you have finished refining the <strong>Semantic Model</strong> press <strong>Save</strong> which is on the top right hand corner of the screen.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/analyst/C008.png" data-desc-position="bottom"><img src="assets/analyst/C008.png" alt="Save semantic model" width="300"></a></p>
+</li>
+</ul>
+<p><h1sub>Add transcripts to the model</h1sub></p>
+<p>You will have remembered that we also produced structured data from sound files.  Wouldn't it be good if you could also ask <strong>Cortex Analyst</strong> when sections of the call are negative or positive??</p>
+<ul>
+<li>
+<p>Add an additional <strong>LOGICAL TABLE</strong> to the existing semantic model </p>
+</li>
+<li>
+<p>Use the <strong>TRANSCRIPTS_BY_MINUTE</strong> table which is inside the <strong>DEFAULT_SCHEMA</strong></p>
+</li>
+<li>
+<p>Take a look at the facts, Dimensions, synonyms etc of each field - to help Cortex understand the context</p>
+</li>
+<li>
+<p>Try out cortex analyst with the prompt.  See if you can get a good answer for <em>"what transcript is the most negative?"</em></p>
+</li>
+<li>
+<p>Explore other questions users might ask, and refine the model accordingly.</p>
+</li>
+<li>
+<p>Save any changes to the model.  The more descriptive your model, the better the results.  </p>
+</li>
+</ul>
+<p>Remember to <strong>Save</strong> your work as we will be using this semantic model in the next step.</p>
+<p>So now we have a way to find out information about <strong>Structured Data</strong>, and we created a search service for <strong>Unstructured Data</strong>.</p>
+<p>Let's create an <strong>Application</strong> to combine the two types of searches together.  </p>
+<ul>
+<li>Please proceed to the <strong>Application</strong> section where you will learn about <strong>Creating an Agent</strong> using <strong>Snowflake Intelligence</strong></li>
+</ul></body></html></section></section>
+                    <section class='print-page md-section' id='section-2-4' heading-number='2.4'>
+                        <h1>Application<a class='headerlink' href='#section-2-4' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="snowflake_intelligence" heading-number="2.4.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="configure-and-use-snowflake-intelligence"><h1black>Configure and use </h1black> <h1blue>Snowflake Intelligence</h1blue></h1>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/intelligence/intelligence_screenshot.png" data-desc-position="bottom"><img src="assets/intelligence/intelligence_screenshot.png" alt="Agent demonstration" width="900"></a></p>
+<h2 id="snowflake_intelligence-introduction"><h1sub>Introduction</h1sub></h2>
+<p>In this section, you will bring together all the AI capabilities you've built throughout this lab to create a unified, intelligent financial assistant using <strong>Snowflake Intelligence</strong>. This represents the culmination of your hands-on learning experience, where you'll orchestrate multiple AI tools into a single conversational agent.</p>
+<h3 id="snowflake_intelligence-what-youll-accomplish"><strong>What You'll Accomplish</strong></h3>
+<p>By the end of this section, you will have:</p>
+<ul>
+<li><strong>Created a Financial AI Agent</strong>: Built a conversational agent that acts as a knowledgeable financial analyst named "StockOne"</li>
+<li><strong>Integrated Multiple Data Sources</strong>: Connected your agent to both structured data (via Cortex Analyst) and unstructured data (via Cortex Search)</li>
+<li><strong>Unified Analysis Capabilities</strong>: Enabled seamless querying across stock prices, analyst reports, earnings calls, and financial infographics</li>
+<li><strong>Demonstrated Real-world Applications</strong>: Shown how AI can synthesize complex financial information to support investment decisions</li>
+</ul>
+<h3 id="snowflake_intelligence-building-on-your-previous-work"><strong>Building on Your Previous Work</strong></h3>
+<p>This section leverages everything you've created so far:</p>
+<ul>
+<li><strong>Document AI Models</strong>: Your trained models for analyst reports and infographics will provide structured insights</li>
+<li><strong>Cortex Search Services</strong>: Your search services will enable rapid retrieval of relevant information from earnings calls and reports  </li>
+<li><strong>Cortex Analyst Semantic Models</strong>: Your semantic models will allow natural language querying of financial data</li>
+<li><strong>Marketplace Data</strong>: Your connected stock price data will provide real-time market information</li>
+</ul>
+<h3 id="snowflake_intelligence-what-is-snowflake-intelligence"><strong>What is Snowflake Intelligence?</strong></h3>
+<p>Snowflake Intelligence is a comprehensive AI platform that allows you to create sophisticated agents by combining multiple AI tools and data sources. Unlike simple chatbots, these agents can:</p>
+<ul>
+<li><strong>Reason Across Data Types</strong>: Combine insights from structured databases and unstructured documents</li>
+<li><strong>Use Specialized Tools</strong>: Leverage different AI capabilities (search, analysis, visualization) as needed</li>
+<li><strong>Provide Contextual Responses</strong>: Give detailed, evidence-backed answers with citations and visualizations</li>
+<li><strong>Learn from Multiple Sources</strong>: Draw insights from your complete data ecosystem</li>
+</ul>
+<p>Let's begin by creating your financial intelligence agent that will demonstrate the power of unified AI-driven analysis.</p>
+<h2 id="snowflake_intelligence-creating-your-financial-agent"><h1sub>Creating Your Financial Agent</h1sub></h2>
+<p>You can easily create your own agent using <strong>Snowflake Intelligence</strong></p>
+<ul>
+<li>Within <strong>AI &amp; ML</strong>  click on <strong>Agents</strong></li>
+<li>
+<p>Press <strong>Create Agent</strong></p>
+</li>
+<li>
+<p>Fill in the text boxes provided.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/intelligence/int001.png" data-desc-position="bottom"><img src="assets/intelligence/int001.png" alt="Create agent form" width="600"></a></p>
+<ul>
+<li>Press <strong>Create agent</strong></li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/intelligence/int002.png" data-desc-position="bottom"><img src="assets/intelligence/int002.png" alt="Agent created" width="600"></a></p>
+<ul>
+<li>Click on the agent and then press <strong>Edit</strong></li>
+<li>Populate the about description - similar to the example below:</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/intelligence/int003.png" data-desc-position="bottom"><img src="assets/intelligence/int003.png" alt="Agent description" width="600"></a></p>
+<ul>
+<li>
+<p>Under <strong>Instructions</strong>, fill in the response instructions as follows:</p>
+<p><strong>Response Instruction</strong></p>
+<p>You are a financial analyst called StockOne.  You are using the latest information about Snowflake to give the user expert advice.</p>
+<p><strong>Sample Questions</strong></p>
+<p>give me a table of ratings for each analyst?</p>
+<p>what happened in the last earnings call?</p>
+<p>Is Snowflake expected to grow in the future?</p>
+<p>what are the latest SNOW stock prices over time in the last 12 months?</p>
+<p>how many marketplace listings are in the latest report?</p>
+<p>What did Shridhar say about revenue in the last earnings call?</p>
+<p>shall I buy Snowflake shares?</p>
+<p>Give me a chart which analyses sentiment on the earnings calls</p>
+</li>
+</ul>
+<h2 id="snowflake_intelligence-adding-tools-to-the-agent"><h1sub> Adding Tools to the Agent</h1sub></h2>
+<p>Snowflake Intelligence allows for multiple tools to be added to allow the agent to answer the question. The standard snowflake tools you can add are <strong>search services</strong> and <strong>Cortex Analyst</strong>.</p>
+<p>In addition, you can add custom tools - such as a tool to generate an email or using other external services.</p>
+<ul>
+<li>Under <strong>Tools</strong> click <strong>+add</strong> next to Cortex Analyst to add the defined semantic model</li>
+</ul>
+<p>You can select the model either as a view or via the Semantic Model File.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/intelligence/int004.png" data-desc-position="bottom"><img src="assets/intelligence/int004.png" alt="Cortex Analyst tool configuration" width="600"></a></p>
+<p>Choose <strong>DEFAULT_WH</strong> for the warehouse. This is the warehouse used to process the queries.</p>
+<p>Under query Timeout, add the max number of seconds that the agent is allowed to think before timing out. In this example, enter 20.</p>
+<ul>
+<li>
+<p>Finally enter a description for the tool. <strong>Tip</strong> Generate with Cortex to automatically provide a meaningful description. Allow time for the description to be generated.</p>
+</li>
+<li>
+<p>Press <strong>Add</strong> to add the tool.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/intelligence/int005.png" data-desc-position="bottom"><img src="assets/intelligence/int005.png" alt="Tool added successfully" width="600"></a></p>
+<p>Next you will create tools for the unstructured data.  These will be linked to <strong>Search Services</strong></p>
+<ul>
+<li>
+<p>Under <strong>Cortex Search Services</strong>, select <strong>+Add</strong> to create to assign a new search service</p>
+</li>
+<li>
+<p>Complete the configuration as per the screenshot below.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/intelligence/int006.png" data-desc-position="bottom"><img src="assets/intelligence/int006.png" alt="Search service configuration" width="600"></a></p>
+<p>You will be assigning the URL in order to drill down to documents when appropriate.</p>
+<ul>
+<li>
+<p>Press <strong>Add</strong></p>
+</li>
+<li>
+<p>Create a Second Search Service Tool - this time, for the Infographics</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/intelligence/int007.png" data-desc-position="bottom"><img src="assets/intelligence/int007.png" alt="Infographics search service" width="600"></a></p>
+<p><h1sub>Orchestration</h1sub>
+Next you will need to choose the LLM in order to orchestrate the questions provided by the consumer. This will be in the Orchestration section. You will see which LLMs are available. If you wish, let the agent decide by leaving <strong>auto</strong> set.</p>
+<p>You can also prompt the agent further by how to break down the tasks</p>
+<p>Press <strong>Save</strong> to save the agent.</p>
+<p><h1sub>Snowflake Intelligence</h1sub></p>
+<p>Now you have finished the agent setup, you can now go to <strong>Snowflake Intelligence</strong> and ask questions.</p>
+<ul>
+<li>
+<p>From AI &amp; ML, navigate to <strong>Snowflake intelligence</strong></p>
+</li>
+<li>
+<p>Ask a question</p>
+</li>
+</ul>
+<p><strong>Example question</strong></p>
+<p>*Give me a table of ratings for each analyst?</p>
+<p>what happened in the last earnings call?</p>
+<p>What did Morgan Stanley say about Growth?</p>
+<p>what are the latest SNOW stock prices over time in the last 12 months?</p>
+<p>how many marketplace listings are in the latest report?</p>
+<p>Tell me about dynamic tables?</p>
+<p>What did Shridhar say about revenue in the last earnings call?</p>
+<p>shall I buy Snowflake shares?*</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/intelligence/intelligence_query_example.png" data-desc-position="bottom"><img src="assets/intelligence/intelligence_query_example.png" alt="Query response example" width="900"></a></p>
+<p>You will note that this question will look at a variety of data sources which provides the answer.</p>
+<h2 id="snowflake_intelligence-conclusion"><h1sub>Conclusion</h1sub></h2>
+<p>Congratulations! You have successfully built a comprehensive AI-powered financial analysis assistant using Snowflake Intelligence. Throughout this hands-on lab, you have accomplished several key objectives:</p>
+<h3 id="snowflake_intelligence-data-integration-and-processing"><strong>Data Integration and Processing</strong></h3>
+<p>You have successfully integrated and processed multiple types of financial data:</p>
+<ul>
+<li><strong>Real-time Stock Data</strong>: Connected to marketplace data to access current and historical Snowflake (SNOW) stock prices</li>
+<li><strong>Analyst Reports</strong>: Used Document AI to extract structured insights from fictional analyst reports, including ratings (BUY/SELL/HOLD), price targets, and growth projections</li>
+<li><strong>Financial Infographics</strong>: Processed quarterly earnings infographics to extract key metrics like revenue, customer counts, and marketplace listings</li>
+<li><strong>Earnings Call Transcripts</strong>: Analyzed audio recordings from quarterly earnings calls, including sentiment analysis and key executive statements</li>
+</ul>
+<h3 id="snowflake_intelligence-ai-technologies-mastered"><strong>AI Technologies Mastered</strong></h3>
+<p>You have hands-on experience with cutting-edge AI capabilities:</p>
+<ul>
+<li><strong>Document AI</strong>: Built and trained custom models to extract structured data from unstructured financial documents</li>
+<li><strong>Cortex Search</strong>: Created search services for rapid retrieval of relevant information from large document collections</li>
+<li><strong>Cortex Analyst</strong>: Developed semantic models to enable natural language querying of structured financial data</li>
+<li><strong>Snowflake Intelligence</strong>: Orchestrated multiple AI tools into a unified conversational agent</li>
+</ul>
+<h3 id="snowflake_intelligence-unified-financial-decision-support"><strong>Unified Financial Decision Support</strong></h3>
+<p>Your agent can now provide comprehensive investment insights by:</p>
+<ul>
+<li><strong>Combining Multiple Perspectives</strong>: Integrating quantitative stock data with qualitative analyst opinions and executive commentary</li>
+<li><strong>Time-based Analysis</strong>: Analyzing trends over time from historical stock prices, quarterly reports, and evolving analyst ratings</li>
+<li><strong>Sentiment Understanding</strong>: Assessing market sentiment through earnings call analysis and analyst report tone</li>
+<li><strong>Real-time Intelligence</strong>: Providing up-to-date information synthesis to support investment decisions</li>
+</ul>
+<h3 id="snowflake_intelligence-real-world-applications"><strong>Real-world Applications</strong></h3>
+<p>The AI assistant you've built demonstrates practical applications for:</p>
+<ul>
+<li><strong>Investment Research</strong>: Quickly synthesizing information from multiple sources to evaluate investment opportunities</li>
+<li><strong>Risk Assessment</strong>: Understanding both quantitative metrics and qualitative factors that could impact stock performance</li>
+<li><strong>Market Analysis</strong>: Combining structured financial data with unstructured market commentary for comprehensive analysis</li>
+<li><strong>Decision Support</strong>: Providing evidence-based recommendations backed by multiple data sources</li>
+</ul>
+<h3 id="snowflake_intelligence-key-takeaway"><strong>Key Takeaway</strong></h3>
+<p>You have experienced firsthand how Snowflake's AI Data Cloud can transform raw, disparate financial information into actionable intelligence. By combining structured data (stock prices, financial metrics) with unstructured data (analyst reports, earnings calls), your AI agent can now answer complex questions like "Should I buy Snowflake shares?" with comprehensive, data-driven insights.</p>
+<p>This approach represents the future of financial analysis - where AI enables rapid synthesis of vast amounts of information to support better investment decisions. The techniques you've learned can be applied to any stock, sector, or financial decision-making scenario.</p>
+<p><strong>Remember</strong>: While this lab demonstrates powerful AI capabilities for financial analysis, all analyst reports used were fictitious, and no actual investment decisions should be made based on this lab's outputs.</p></body></html></section><section class="print-page" id="agents" heading-number="2.4.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="create-cortex-agents-using-the-agents-api"><h1black>Create </h1black><h1blue>Cortex Agents using the Agents API</h1blue></h1>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/agent/ag03.png" data-desc-position="bottom"><img src="assets/agent/ag03.png" alt="Agent demonstration" width="900"></a></p>
+<p>You have now experienced out of the box agents using simple configuration using Snowflake Intelligence. Snowflake also supports the creation of custom built agents using the Agents API. Let's see how a <strong>Cortex Agent</strong> using Streamlit will allow users to ask questions about their data all in one place.  </p>
+<p>If you have completed all the previous steps then this step should <strong>just work</strong>.</p>
+<ul>
+<li>Within <strong>Projects&gt;Streamlits</strong> click on the streamlit <strong>2_CORTEX_AGENT_SOPHISTICATED</strong></li>
+</ul>
+<p>It leverages <strong>Streamlit extras</strong> which has packaged in styles to customize your app. It also allows you to choose the search service and analyst semantic model during the app configuration. The agent has configurable options for the user such as multiple chart types using <strong>Plotly</strong></p>
+<ul>
+<li>
+<p>Ask questions about the data that might appear in the earnings calls or analyst reports.</p>
+</li>
+<li>
+<p>Ask questions about the data that might appear in the stock data or the latest infographics.</p>
+</li>
+</ul>
+<h4 id="agents-sample-questions"><h1sub> Sample Questions</h1sub></h4>
+<p>These questions should give answers from both <strong>unstructured</strong> and <strong>structured</strong> examples using all the datasets we covered in this lab.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#agents-__codelineno-0-1"></a>give me a table of ratings for each analyst?
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#agents-__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#agents-__codelineno-0-3"></a>what happened in the last earnings call?
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#agents-__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#agents-__codelineno-0-5"></a>What did Morgan Stanley say about Growth?
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#agents-__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#agents-__codelineno-0-7"></a>what are the latest SNOW stock prices over time in the last 12 months?
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#agents-__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#agents-__codelineno-0-9"></a>how many marketplace listings are in the latest report?
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#agents-__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#agents-__codelineno-0-11"></a>Tell me about dynamic tables?
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#agents-__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#agents-__codelineno-0-13"></a>What did Shridhar say about revenue in the last earnings call?
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#agents-__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#agents-__codelineno-0-15"></a>shall I buy Snowflake shares?
+</code></pre></div>
+<p>If you completed the optional exercise in Cortex Analyst, this is the response you will get if you ask what transcript had the lowest sentiment:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="assets/agent/ag05.png" data-desc-position="bottom"><img src="assets/agent/ag05.png" alt="Agent response example" width="600"></a></p>
+<p>Try asking the following question to get more information</p>
+<p><strong>Can you give me more information about that particular earnings call</strong></p>
+<p>So you should see how convenient it is to bring in both the processing of unstructured datasets and structured datasets to get one holistic view of the data subject (in this case the analysis of Snowflake) in question.</p>
+<h4 id="agents-editing-the-application"><h1sub> Editing the Application</h1sub></h4>
+<p>Your role in this setup allows you to edit the application. This particular agent is quite sophisticated in terms of functionality. So you can understand the key principles of how the agent works, let's switch over to a simpler agent.</p>
+<p>Within <strong>Projects &gt; Streamlit</strong> navigate to <strong>CORTEX_AGENT_SIMPLE</strong></p>
+<ul>
+<li>Press <strong>Edit</strong> to go into edit mode.</li>
+</ul>
+<p>You will notice that the semantic model has been specified as well as the search service - which is what you created earlier.</p>
+<p>You will notice a series of functions such as:</p>
+<ul>
+<li>
+<p><strong>run_snowflake_query</strong></p>
+<p>This calls the built-in Agent API - and will treat the question differently depending on the context. For instance, if the answer relates to structured data, it will use the tool spec <strong>analyst1</strong> which will attempt to turn the question into a SQL query and will use the YAML file which you created in <strong>Cortex Analyst</strong>. If however, the answer can only be found from unstructured data, it will use the tools spec <strong>cortex_search</strong> which will then use the search service to retrieve the information. It will also retrieve up to 10 citations - these will be the chunked text which were extracted earlier on in the lab.</p>
+</li>
+<li>
+<p><strong>process_sse_response</strong></p>
+<p>This is about parsing the results in something readable as the original response will be a JSON payload</p>
+</li>
+<li>
+<p><strong>execute_cortex_complete_sql</strong></p>
+<p>This uses the LLM to attempt to create a chart based on what is in the dataset. The type of LLM is defined using the <strong>model</strong> variable.</p>
+</li>
+<li>
+<p><strong>extract_python_code</strong></p>
+<p>This is used to return the Python result (which will be a Streamlit chart) into executable code.</p>
+</li>
+<li>
+<p><strong>replace_chart_function</strong></p>
+<p>This uses the same variables created for the suggested chart but allows for alternative Streamlit charts.</p>
+</li>
+<li>
+<p><strong>def main</strong></p>
+<p>This is the initial (parent) function which is executed first and calls the other functions when appropriate. </p>
+</li>
+</ul>
+<p>If you would like to make any changes to this application, you will need to <strong>duplicate it</strong>. This is because the Streamlit app is managed by an external application.</p>
+<p>If you duplicate the application using the duplicate button, all files associated to the application will be copied with it.</p>
+<h3 id="agents-conclusion"><h1sub> Conclusion </h1sub></h3>
+<p>The Cortex Agent provides a unified way to query both structured and unstructured datasets, enabling users to gain insights from diverse data sources within a single application. By leveraging Streamlit’s customization capabilities and integrating Snowflake’s semantic model and search service, users can seamlessly retrieve information from earnings calls, analyst reports, stock data, and more. The built-in functions ensure efficient querying, data parsing, and visualization, making it easier to analyze financial and market trends.</p>
+<h3 id="agents-resources"><h1sub> Resources </h1sub></h3>
+<ul>
+<li>
+<p>Click <a href="https://github.com/sfc-gh-boconnor/build_fsi_assistant_supporting_code_v2">here</a> to view and download the code used in this lab.</p>
+</li>
+<li>
+<p>Click <a href="https://quickstarts.snowflake.com/guide/s_and_p_market_intelligence_analyze_earnings_transcripts_in_cortex_ai/index.html?utm_cta=website-workload-data-science-card-one#0">here</a> to analyze earnings call transcripts with Cortex AI</p>
+</li>
+<li>
+<p>Click <a href="https://quickstarts.snowflake.com/guide/getting_started_with_cortex_agents/index.html#0">here</a> to run a quickstart on Cortex Agents</p>
+</li>
+</ul></body></html></section></section></section></div><style>.print-site-enumerate-headings #section-1 > h1:before { content: '1 ' }
+.print-site-enumerate-headings #index > h1:before { content: '1.1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-increment: counter-index-2 }
+            
+.print-site-enumerate-headings #section-2 > h1:before { content: '2 ' }
+.print-site-enumerate-headings #logging_in > h1:before { content: '2.1 ' }
+
+                .print-site-enumerate-headings #logging_in h2:before { content: '2.1.' counter(counter-logging_in-2) ' ' }
+                .print-site-enumerate-headings #logging_in h2 {  counter-increment: counter-logging_in-2 }
+            
+.print-site-enumerate-headings #section-2-2 > h1:before { content: '2.2 ' }
+.print-site-enumerate-headings #document_ai > h1:before { content: '2.2.1 ' }
+
+.print-site-enumerate-headings #sound_transcripts > h1:before { content: '2.2.2 ' }
+
+.print-site-enumerate-headings #search_service > h1:before { content: '2.2.3 ' }
+
+.print-site-enumerate-headings #section-2-3 > h1:before { content: '2.3 ' }
+.print-site-enumerate-headings #market_place > h1:before { content: '2.3.1 ' }
+
+.print-site-enumerate-headings #analyst > h1:before { content: '2.3.2 ' }
+
+.print-site-enumerate-headings #section-2-4 > h1:before { content: '2.4 ' }
+.print-site-enumerate-headings #snowflake_intelligence > h1:before { content: '2.4.1 ' }
+
+.print-site-enumerate-headings #agents > h1:before { content: '2.4.2 ' }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+    
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    <!-- Build details for debugging -->
+<div id="build-details" hidden>
+  <a id="build-details-location"></a><div id="dataopslive.plugin.data" style="display: none"></div>
+</div>
+<div
+  style="background-color: #24323d; margin: 0; width: 100%; height: 74px"
+></div>
+
+<!-- Footer -->
+<div id="footer">
+  <!-- Powered by DataOps -->
+  <a
+    id="powered-by-dataops"
+    href="https://www.dataops.live"
+    target="_blank"
+    rel="noreferrer"
+    ><img height="41" src="assets/img/powered-by-dataops.png"
+  /></a>
+
+  <!-- TrueDataOps -->
+  <div id="true-dataops-link">
+    <a href="https://www.truedataops.org/" target="_blank" rel="noreferrer"
+      >#TrueDataOps</a
+    >
+  </div>
+
+  <!-- DataOps for Dummies Ebook -->
+  <div id="dataops-for-dummies-link">
+    <a
+      href="https://www.dataops.live/dataops-for-dummies-download"
+      target="_blank"
+      rel="noreferrer"
+      >DataOps for Dummies Ebook</a
+    >
+  </div>
+</div>
+
+<!-- Load build details for debugging -->
+<script>
+  var dataopslive = 
+  let toggle = () => {
+    let element = document.getElementById("build-details");
+    let hidden = element.getAttribute("hidden");
+
+    if (hidden) {
+      element.removeAttribute("hidden");
+    } else {
+      element.setAttribute("hidden", "hidden");
+    }
+  };
+
+  const mkdocsFooter = document.getElementsByClassName("md-footer-meta")[0];
+  mkdocsFooter.remove();
+</script>
+<style>
+  .dataops-link:hover {
+    color: white;
+  }
+</style>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "/", "features": ["toc.integrate", "content.tabs.link", "content.code.copy", "content.code.annotation", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+        <script src="assets/javascripts/button-click-tracking.js"></script>
+      
+        <script src="assets/javascripts/collapsed-code.js"></script>
+      
+    
+  </body>
+</html>

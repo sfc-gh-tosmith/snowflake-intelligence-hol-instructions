@@ -1,0 +1,100 @@
+.dataops-header {
+  height: 64px;
+  background-color: rgb(36 50 61);
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding-left: 12.8px;
+  padding-right: 32px;
+}
+
+.app-switcher {
+  color: rgb(243 244 246);
+  padding-right: 20px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-color: rgb(135 133 141);
+}
+
+.app-switcher > button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.app-switcher > button:hover {
+  background-color: rgb(55 65 81);
+}
+
+.app-switcher-active {
+  background-color: rgb(55 65 81);
+}
+
+.app-switcher > button:active {
+  background-color: rgb(55 65 81);
+}
+
+.app-switcher-options {
+  position: absolute;
+  z-index: 10;
+  width: 165px;
+  max-height: 240px;
+  margin-top: 8px;
+  padding: 0px;
+  border-radius: 6px;
+  background-color: rgb(36 50 61);
+  overflow: auto;
+  font-size: 14px;
+  line-height: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(41 181 232);
+  box-shadow: (0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+  list-style: none;
+}
+
+.app-switcher-options > li {
+  position: relative;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 36px;
+  color: rgb(243 244 246);
+  cursor: default;
+}
+
+.app-switcher-options > li:hover {
+  color: white;
+  background-color: rgb(17, 86, 127);
+}
+
+.dataops-logo-container {
+  margin-left: 8px;
+  padding: 0px 16px;
+}
+
+.portal-logo-container {
+  margin-left: 8px;
+  padding: 0px 24px;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-color: rgb(135 133 141);
+}
+
+.portal-name {
+  margin-left: 8px;
+  padding: 0px 16px;
+  color: rgb(243 244 246);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.hidden {
+  display: none;
+}
